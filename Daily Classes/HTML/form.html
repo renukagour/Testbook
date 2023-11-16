@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form tag</title>
+</head>
+
+<body>
+    <h1>Forms in html</h1>
+    <form action="thank.html">
+        <label for="fname">First Name</label> <input type="text" id="fname" placeholder="Enter First Name
+        "><br><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" maxlength="6"><br><br>
+
+        <label for="cname">Course Name</label><!--value use for by default value 
+                                                 and read only use for cant change data 
+                                                 value can change but read only not-->
+        <input type="text" id="cname" value="computer Science" readonly><br><br>
+
+        <label for="sidname">Student UID</label>
+        <input type="number" id="sid" value="89"
+            disabled><br><br><!--disabled attribute shows this will not be included in database-->
+
+        <label for="email">Student Email</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="pincode">PinCode</label>
+        <input type="number" id="pincode" min="2" max="6"><br><br>
+
+        <input type="radio" id="male" name="gender">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label><br> <br>
+
+        <label for="sports">Sports</label>
+
+        <input type="Checkbox" id="basketball">
+        <label for="basketball">Basket ball</label>
+
+        <input type="Checkbox" id="tennis">
+        <label for="tennis">Tennis</label><br><br>
+
+        <label for="hobbies">Hobbies </label><br>
+
+        <select multiple size="5"><!--multiple for selecting multiple values
+                                       size for showing how much value shows at bar-->
+            <option value="Select-multiple-value" selected disabled>Choose your hobby</option>
+            <!--selected by default shows selected disabled for not selecting-->
+            <option value="Dance">Dance</option>
+            <option value="Sing">Sing </option>
+            <option value="Write">Write</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Painting">Painting</option>
+        </select>
+        <br><br>
+
+        <label for="coffies">Coffies </label><br>
+
+        <select><!--multiple for selecting multiple values
+                                       size for showing how much value shows at bar-->
+            <option value="Select-multiple-value" selected disabled>Choose your coffee</option>
+            <!--selected by default shows selected disabled for not selecting-->
+
+            <optgroup label="HotCoffee"><!--optgroup for categorization-->
+                <option value="hotchocalatecoffee">hot chocalate coffee</option>
+                <option value="mocha">mocha </option>
+                <option value="espresso">espresso</option>
+                <option value="capachino">capachino</option>
+            </optgroup>
+            <optgroup label="ColdCoffee">
+                <option value="icedlatte">icedlatte</option>
+                <option value="brewcoffee">brew coffee</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+        <!--Date-->
+        <input type="date"><br><br>
+        
+        <label for="textarea"> Write Something </label><br>
+        <textarea name="" id="" cols="30" rows="5"
+            style="resize:none"></textarea><br><br><!--Resize property for not extend -->
+
+        <label for="file">Upload Picture</label>
+        <input type="file" id="file" multiple><br><br><!--multiple for multiple files by default one-->
+
+        <input type="submit" class="submit">
+    </form>
+</body>
+
+</html>
