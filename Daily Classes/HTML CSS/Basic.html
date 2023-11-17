@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--meta -- compiler or interpreter for language conversion UTF-8(uniform Tranformation)language-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewport -- you can edit height and width
+                                                       initial-scale -- zoom 100% by default  -->
+    <!--when searching some words are shown for that-->
+    <meta name="descripition" content="practice of css...">
+    <!--SEO Search Engine Optimization-->
+    <meta name="keywords" content="HTML,CSS,Coding in html">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Basic.css"><!--External CSS-->
+    <!--Internal CSS-->
+    <style>
+        /*html{
+            background-color: grey;
+        } */
+
+        /*body{
+            background-color: aqua;
+        }
+        */
+        * {
+            background-color: rgb(144, 255, 127);
+        }
+
+        :root{
+            --pink:palevioletred;
+        }
+        /*p,section{
+         background-color: pink;
+
+        }*/
+        .demo {
+            background-color: rgb(192, 192, 255);
+            color: var(--pink);
+        }
+
+        .hello {
+            color: white;
+        }
+
+        #demo1 {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Live Class</h1>
+    <div style="background-color: yellow;">This is div</div><!--Inline CSS-->
+    <p class="demo hello">This is paragraph1</p>
+    <p class="demo hello">This is paragraph2</p>
+    <p class="demo">This is paragraph3</p>
+    <p class="demo">This is paragraph4</p>
+    <p class="demo">This is paragraph5</p>
+    <p id="demo1">This is paragraph6</p>
+    <div id="demo1">This is div5</div><!--id must not repeat for standard -->
+    <section>THis is Section </section>
+</body>
+
+</html>
+
+
+<!-- selectors
+HTML
+body
+root -- when has to name something 
+        syntax= --name:value;
+        for use= aname:var(--name);
+        
+tag 
+group
+id
+classes
+ universal -- *-->
