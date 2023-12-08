@@ -1,0 +1,10 @@
+body{
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.li1{
+    padding-left: 20px;
+}
+.li2 .li3 .li4 .li5 .li6 {
+    padding-left: 20px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 350px;
+            background-color: crimson;
+
+        }
+
+        #demo1 {
+            height: 120px;
+            width: 120px;
+            background-color: green;
+            margin: 30px;
+            /*Distance from parent*/
+            padding: 30px;
+            /*Distance from child*/
+
+        }
+
+        p {
+            width: 120px;
+            height: 120px;
+            background-color: lightgreen;
+
+        }
+
+        #child1,
+        #child2 {
+            background-color: yellow;
+        }
+
+        /*  #child1 {
+            background-color: yellowgreen;
+        }
+   #child2{
+            background-color: yellow;
+        }*/
+    </style>
+</head>
+
+<body>
+    <h1>Margin in CSS</h1>
+    <div class="container">
+
+        <div id="demo1">
+            <div id="child1">child1</div>
+            <div id="child2">child2</div>
+        </div>
+        <p id="demo2"></p>
+
+    </div>
+
+</body>
+
+</html>
