@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            border: 25px solid;
+            height: 350px;
+            width: 350px;
+            margin:90px auto;
+            padding: 20px;
+            background-size:100% 100% ;
+            /*apply img to border*/
+            border-image-source: url("./flower.png");
+            border-image-slice:20 ;/*this value get from img open
+             in paint and rect area that want get nidd val */
+           
+        }
+        .div2{
+            border: 25px solid;
+            height: 350px;
+            width: 350px;
+            margin:90px auto;
+            padding: 20px;
+            background-size:100% 100% ;
+            /*apply img to border*/
+            border-image-source: url("./bg2.png");
+            border-image-slice:35 ;/*this value get from img open
+             in paint and rect area that want get nidd val */
+            border-image-repeat: repeat;/*to remove stretch--> they crop and cover*/
+            border-image-repeat: round;/*reduce some*/
+        }
+        .div3{
+            border: 25px solid;
+            height: 350px;
+            width: 350px;
+            margin:90px auto;
+            padding: 20px;
+            background-size:100% 100% ;
+            background-color: aqua;
+            /*apply img to border*/
+            border-image-source: url("./border2.png");
+            border-image-slice:290 ;/*this value get from img open
+             in paint and rect area that want get nidd val */
+             border-image-width: 60px;
+             /*go outside the border*/
+             border-image-outset: 60px;
+             /*short-hand property study you*/
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate quas distinctio optio pariatur id
+        dolores maiores accusantium, itaque et debitis iureatae eligendi laborum labore ducimus soluta! Ratione, quam ullam.
+        Similique!</div>
+        <div class="div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate quas distinctio optio pariatur id
+            dolores maiores accusantium, itaque et debitis iureatae eligendi laborum labore ducimus soluta! Ratione, quam ullam.
+            Similique!</div>
+            <div class="div3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate quas distinctio optio pariatur id
+                dolores maiores accusantium, itaque et debitis iureatae eligendi laborum labore ducimus soluta! Ratione, quam ullam.
+                Similique!</div>
+            
+
+        
+</body>
+
+</html>

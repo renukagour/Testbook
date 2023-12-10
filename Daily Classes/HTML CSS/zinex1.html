@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            color: rgb(236, 244, 9);
+        }
+        /* z-index --> property to show where to 
+        element should display either left right or anywhere
+        kis ko uper or kisko neeche
+        z-index= +ve high priority*/
+      div{
+        position: absolute;
+        top: 0;
+        /*z-index: -1;*/
+        /**/
+      }
+       
+        .box1{
+            height: 600px;
+            width: 200px;
+            background-color: aqua;
+           z-index: -3;
+           /* z-index: 3;*/
+
+        }6
+        .box2{
+            height: 400px;
+            width: 300px;
+            background-color: rgb(255, 0, 93);
+            z-index: -2;
+          /* z-index: 4;*/
+        }
+        .box3{
+            height: 200px;
+            width: 400px;
+            background-color: rgb(61, 149, 10);
+            z-index: -4;
+           /* z-index: 2;*/
+        }
+    </style>
+</head>
+<body>
+    <h1>z-index in CSS</h1>
+    
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

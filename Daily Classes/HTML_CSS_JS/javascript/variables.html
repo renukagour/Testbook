@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables in JavaScript</h1>
+    <p id="demo"></p>
+
+    <script>
+        
+
+        'use strict' //by ESMA Script tells 
+                      //you cant use variables without declaration
+        let l=9
+        console.log(l);//gives error  if only l=9
+        //4ways to define a variable
+     /*   a=5;
+        b=6 
+document.getElementById('demo').innerHTML=a+b;*/
+//let var const
+let a=5;//scope within block
+const b=10; //value cant change scope in block
+var c=9 //within function //function scop variable
+document.getElementById('demo').innerHTML=a+b+c;
+{
+    const pi=3.14
+   // pi=4.5 //gives error
+    console.log(pi);
+}
+
+let pi=4.5
+pi=9.0
+console.log(pi);
+
+function show(){
+    var v=15;
+console.log(v);
+}
+
+show();
+
+//console.log(v); //dont acceess here gives error
+    </script>
+</body>
+</html>

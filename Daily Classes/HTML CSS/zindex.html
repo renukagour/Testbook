@@ -1,54 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1,p{
-            color: violet;
+        h1,
+        p {
+            color: rgb(236, 244, 9);
         }
-       img{
+
+        /* z-index --> property to show where to 
+        element should display either left right or anywhere
+        kis ko uper or kisko neeche
+        z-index= +ve high priority*/
+        img {
             position: absolute;
             top: 0;
             z-index: -1;
-        }
-        /* img{
-            position: relative;
-            top: 0;
-            z-index: -1;
-        }*/
-        /*img{
-            position: absolute;
-         
-            z-index: -1;
-        }*/
-        div{
-            position: absolute;
-        }
-        .box1{
-            height: 600px;
-            width: 200px;
-            background-color: aqua;
-        }
-        .box2{
-            height: 100px;
-            width: 200px;
-            background-color: rgb(255, 0, 93);
-        }
-        .box3{
-            height: 100px;
-            width: 200px;
-            background-color: rgb(255, 0, 221);
         }
     </style>
 </head>
+
 <body>
     <h1>z-index in CSS</h1>
-    <!-- <img src="./bg.jpg" alt="" width="400px" height="300px">
-    <p>This is Deer</p> -->
-    <div class="box1"></div>
-    <div class="box2"></div>
-    <div class="box3"></div>
+    <img src="./bg.jpg" alt="" width="400px" height="300px">
+    <p>This is Deer</p>
+    <p>This is Deer</p>
+    <p>This is Deer</p>
+
 </body>
+
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cliptext {
+            background-image: url("./bg.jpg");
+            font-size: 10vw;
+            background-color: red;
+            background-size: 100% 100%;
+            /*clip image in bg*/
+            background-clip: text;
+            -webkit-background-clip: text;
+            /*if some doesn't work with one of the browser for that
+            browser supporters are there like webkit for safari and chrome*/
+/*to show use*/
+color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="cliptext">Marry Christmas</h1>
+</body>
+
+</html>

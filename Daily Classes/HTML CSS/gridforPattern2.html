@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*pattern 2*/
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'sidebar main main main'
+                'sidebar section1 section2 section3'
+                'footer footer footer footer';
+            /*fr- fraction unit --> to decide which has how much size*/
+            grid-template-columns: 200px 200px 300px 400px;
+            grid-template-rows: 100px 200px 300px 100px;
+            /*define in pixel in difficult so fr --> cover all area and divide in equal if same*/
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 2fr 1fr 1fr;
+
+            gap: 20px;
+            text-align: center;
+
+        }
+
+
+        nav {
+            grid-area: navbar;
+            background-color: aqua;
+            padding-top: 20px;
+            border-radius: 10px;
+
+        }
+
+        main {
+            grid-area: main;
+            background-color: lightcoral;
+            padding-top: 20px;
+            border-radius: 10px;
+
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: skyblue;
+            padding-top: 30px;
+            border-radius: 10px;
+
+        }
+
+        .section1 {
+            grid-area: section1;
+            background-color: burlywood;
+            padding-top: 30px;
+            border-radius: 10px;
+
+        }
+
+        .section2 {
+            grid-area: section2;
+            background-color: lightgreen;
+            padding-top: 30px;
+            border-radius: 10px;
+
+        }
+
+        .section3 {
+            grid-area: section3;
+            background-color: lightslategray;
+            padding-top: 30px;
+            border-radius: 10px;
+
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: lightsalmon;
+            padding-top: 30px;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>navbar</nav>
+        <main>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem assumenda voluptate quos eius
+            aspernatur accusamus natus quam velit. Modi accusantium consectetur aut distinctio atque nisi doloremque
+            labore, ad autem excepturi.</main>
+        <div class="sidebar">Sidebar</div>
+
+        <div class="section1">Section 1</div>
+        <div class="section2">Section 2</div>
+        <div class="section3">Section 3</div>
+        <footer>Footer</footer>
+
+    </div>
+</body>
+
+</html>

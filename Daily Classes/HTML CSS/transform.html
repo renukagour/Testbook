@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*multiple properties in CSS of transform like transition ,translate*/
+div{
+    height: 200px;
+    width: 300px;
+    border: 2px solid red;
+    background-color: grey;
+    margin: 100px auto;
+    /*ek jagah se dusri jagah shift -translate*/
+    /*transform can apply in 1d 2d and 3d*/
+  
+}
+
+.div1{
+    transform: translate(30px,40px);
+    transform: rotate(40deg);
+}
+.div2{
+    transform: rotate(-40deg);
+}
+/*sudo classes are which classes which can change the property of element
+by applyingthem change in their property*/
+div:hover{/*hover is one of the sudo class*/
+    background-color: aqua;
+}
+
+div{
+  /*   transform: scale(1.2);/*increase size by given value*/
+/*here apply in both axis*/
+transform:scale(1.1,1.2) ;
+transform: skew(45deg);/*for tirchhi property*/
+transform: skew(-45deg);
+    }
+    </style>
+</head>
+<body>
+    <h1>Transform in CSS</h1>
+    <!-- <div class="div1">This is div</div>
+    <div class="div2">this is div2</div> -->
+    <div><img src="./bg.jpg" alt="" height="200px" width="200px"></div>
+</body>
+</html>

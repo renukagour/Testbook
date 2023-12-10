@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    animation-name: divdemo;
+    animation-duration: 7s;/*without duration not start anime*/
+}
+/*to give animation since there are sometimes
+multiple divs so give animation name*/
+@keyframes divdemo{
+/*from{background-color: blue;}/*start of anima*/
+/*to{background-color: aqua;}*/
+/*if you want to see multiple transition*/
+0%{
+    background-color: blue;
+}
+25%{
+ background-color: maroon;;
+}
+50%{
+    background-color: aqua;
+}
+75%{
+    background-color: crimson;
+}
+100%{
+    background-color: yellow;
+}
+
+   }   </style>
+</head>
+<body>
+    <!-- animation is upgrade of transition -->
+    <div></div>
+</body>
+</html>

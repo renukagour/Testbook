@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            /*display always work on childs*/
+            /*grid divides in rows and columns
+            most time developers divide in 4 columns*/
+            grid-template-areas:
+            /*   1st    2nd     3rd     4th column*/
+                'navbar navbar navbar navbar'
+                'section section  aside  aside'
+                'footer footer footer footer';
+            /* height: 100vh;*/
+
+        }
+
+        .item {
+            background-color: yellow;
+            border: 3px solid black;
+            padding: 12px 23px;
+        }
+
+        #navbar {
+            grid-area: navbar;
+            /*name given to navbar for his area*/
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="navbar">
+            1 Home About Section
+        </div>
+        <div id="section" class="item">
+            2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde similique dolore eos dolorum, modi
+            perferendis minus obcaecati illum illo quam quis adipisci ea explicabo at, eaque deleniti facilis nesciunt.
+            Alias autem tenetur sapiente, labore ut eos iure ullam ipsa repudiandae quasi id aspernatur, consectetur
+            eum? Quos eum ad ratione.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur mollitia,
+            numquam culpa animi tempore nulla, magni iste quam nisi non dolor accusantium. Similique repellendus
+            quisquam consectetur magni, sint atque minima eligendi voluptatem, obcaecati impedit, ratione et aspernatur
+            reiciendis temporibus maiores id. Dolores aperiam est error nemo, debitis illum iure amet?
+        </div>
+
+        <div id="aside" class="item">
+            3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde similique dolore eos dolorum, modi
+            perferendis minus obcaecati illum illo quam quis adipisci ea explicabo at, eaque deleniti facilis nesciunt.
+            Alias autem tenetur sapiente, labore ut eos iure ullam ipsa repudiandae quasi id aspernatur, consectetur
+            eum? Quos eum ad ratione.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur mollitia,
+            numquam culpa animi tempore nulla, magni iste quam nisi non dolor accusantium. Similique repellendus
+            quisquam c Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eveniet consequatur nobis
+            vol Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, laborum? Quos impedit placeat
+            velit similique officia odit neque nostrum aperiam hic facilis voluptatibus porro nihil temporibus
+            asperiores cupiditate atque omnis at molestias amet, quisquam error facere provident sit. Nihil, atque, sint
+            eligendi laborum reprehenderit a eum placeat repellat, qui aliquid iure? Labore quae eaque aliquam itaque
+            beatae qui officia, ratione delectus optio et praesentium, nisi commodi illo laborum. Minus cum optio magni
+            quis porro iure eius ullam debitis nam itaque dolores assumenda necessitatibus, illum officia? Fugit iste
+            maxime culpa, corporis commodi, reprehenderit animi, suscipit esse quaerat quia non praesentium
+            ratione?uptates ipsa doloribus illum. Consequuntur hic libero, doloremque repellat reprehenderit
+            repellendus,
+            unde corporis similique harum, et laboriosam? Dolore consectetur, odit maxime consequatur illum saepe est
+            sunt iusto non laborum accusantium, nisi vitae voluptatem voluptates officia nobis ex voluptatum!onsectetur
+            magni, sint atque minima eligendi voluptatem, obcaecati impedit, ratione et aspernatur
+            reiciendis temporibus maiores id. Dolores aperiam est error nemo, debitis illum iure amet?
+        </div>
+
+
+        <div class="footer item">
+            4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolorum delectus explicabo quaerat
+            voluptatem
+            error nobis corrupti obcaecati molestiae. Est sequi repellat aliquid culpa incidunt eius optio officia
+            voluptas
+            sapiente ipsa, pariatur iure eos laudantium veniam doloremque eaque sint vitae illum ullam rem, animi
+            tempore
+            omnis perspiciatis! Iste natus voluptate, aspernatur culpa praesentium dolorem a nisi sequi commodi
+            accusantium
+            autem blanditiis ad sapiente illum eveniet consectetur, iusto sunt facilis harum minus. Necessitatibus ipsum
+            inventore sapiente rem assumenda qui aut unde totam temporibus possimus, voluptates consectetur facilis
+            adipisci
+            sunt harum non culpa veniam maiores! Animi adipisci aspernatur eaque, recusandae tenetur velit!
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+ <style>
+     /*transition change one from to another*/
+     div{
+        height: 200px;
+        width: 300px;
+        border: 2px solid red;
+        background-color: aqua;
+       transition: width 2s,height 2s;
+       transition: all 5s;/*for all properties that are applied*/
+     /*  transition-delay: 3s;/*after 3s start and after completing 3s original*/
+    /*there are multiple functions ease ease-in ease-in-out ease-out step-end and linear */
+       transition-timing-function: ease;
+      /*start middle end transition 
+        slow  fast   slow  */
+  
+       
+     }
+     div:hover{
+        width: 600px;
+        height: 300px;
+        background-color: red;
+     }
+ </style>  
+</head>
+<body>
+    <h1>Transition in CSS</h1>
+    <div></div>
+</body>
+</html>

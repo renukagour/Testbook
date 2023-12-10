@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Operators in JavaScript</h1>
+    <p id="result"></p>
+    <p id="show"></p>
+    <script>
+        let a=5;
+        let b=98;
+        let sum=a+b;
+        let d=b/a
+        document.getElementById('result').innerHTML=sum+" "+d;
+        //document.getElementById('result').innerHTML=d;
+
+        if(d>5){
+            document.getElementById('show').innerHTML="True";
+        }
+        //or
+        document.getElementById('show').innerHTML=d>5
+        
+    </script>
+</body>
+</html>

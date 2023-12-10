@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: grid;
+            margin: 50px auto;
+            width: 75%;
+            /*75% width from entire width*/
+            /*
+           1 _________________  5
+           2 |_______________  |             
+           3 |_______________  |       
+            4|________________ |             
+            5|________________ |            
+           _*/
+            border: 3px solid blue;
+            grid-template-columns: repeat(3, 1fr) 150px ;
+            /*== 1fr 1fr 1fr 150px*/
+            grid-template-rows: 60px 100px 200px 60px;
+            grid-template-columns: repeat(3, 1fr) 150px 100px;
+            grid-template-columns: repeat(3, 1fr),minmax(200px.2fr);/*minmax for change in widt limit*/
+        }
+
+        .div1 {
+            background-color: aqua;
+            grid-column: 1/5;
+
+            /*in 5 parts*/
+          /*or   grid-column: 1/-1*/;
+          grid-column: 1/-1;
+        }
+
+        .div2 {
+            background-color: lightblue;
+            /*dont have to change*/
+           
+        }
+
+        .div3 {
+            background-color: lightcoral;
+            
+        }
+
+        .div4 {
+            background-color: greenyellow;
+            grid-column: 3/5;
+        }
+
+        .div5 {
+            background-color: lightgreen;
+            grid-column: 4/5;
+            grid-row: 2/4;
+            /*2 to 4*/
+            grid-column: 5/6;
+        }
+
+        .div6 {
+            background-color: palevioletred;
+            grid-column: 1/4;
+            grid-column: 1/5;
+        }
+
+        .div7 {
+            background-color: chartreuse;
+            grid-column: 1/5;
+            grid-column: 1/-1;/*upto end*/
+        }
+    </style>
+
+<body>
+    <main>
+        <div class="div1">Section 1</div>
+        <div class="div2">Section 1</div>
+        <div class="div3">Section 2</div>
+        <div class="div4">Section 3</div>
+        <div class="div5">Sidebar</div>
+        <div class="div6">Main</div>
+        <div class="div7">Footer</div>
+
+    </main>
+</body>
+
+</html>

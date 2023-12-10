@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="confirm-dialog">
+        <p>Are you sure you want to delete this file?</p>
+        <button type="button" id="confirm-button">OK</button>
+        <button type="button" id="cancel-button">Cancel</button>
+      </div>
+
+      <script>
+        const confirmDialog = document.querySelector('#confirm-dialog');
+const confirmButton = document.querySelector('#confirm-button');
+const cancelButton = document.querySelector('#cancel-button');
+
+confirmButton.addEventListener('click', () => {
+  // Delete the file
+});
+
+cancelButton.addEventListener('click', () => {
+  // Cancel the action
+});
+      </script>
+</body>
+</html>

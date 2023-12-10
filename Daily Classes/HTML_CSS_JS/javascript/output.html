@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Alert in JavaScript</p>
+    <p id="detail"></p>
+    <script>
+        //alert("Half Time is Passed");//to show pop-up msg on window
+        //or use
+       // window.alert("Half Time is Passed");//object of window
+        //window full screen 
+        //document only html whole file
+      //  console.log(window);
+      // confirm("Do you really want to exit");//also use window.confirm
+    //hw istead of ok and cacel can youmake option as exit or stay
+  /* if(confirm("Do you really want to exit")){
+document.getElementById('detail').innerHTML="you presed ok";
+   }    
+   else{
+    document.getElementById('detail').innerHTML="you presed cancel";
+   }
+   */
+
+   //to take input
+   //prompt("Enter Code");
+
+
+let name=prompt("Enter Code");
+if(name){
+document.getElementById('detail').innerHTML='welcome '+name+" into this world";
+}
+
+</script>
+</body>
+</html>
