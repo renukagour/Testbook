@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function Closure</h1>
+    <script>
+        //this is both for arrow as well as simple function
+
+        let b=11;
+        function outer(){
+            let a=9; //lexical environment =those environment child can use parent environment
+            //function closure=how way you  use of lexical environment
+            function inner(){
+                console.log(a,b);//if a not find it find in outer scopes
+                //ft find then print
+            }
+            inner();
+        }
+
+        outer();
+
+        //basically child uses parents values but parent cant use child value are called
+        //function closure
+        //where it can find values are called lexical environment
+    </script>
+</body>
+</html>

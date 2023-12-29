@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JS Functions</h1>
+    <p id="show"></p>
+    <p id="show1"></p>
+    <p id="show2"></p>
+    <p id="show3"></p>
+    <p id="show4"></p>
+    <script>
+        //example - 1
+        //non-paramaterized function
+        function show() {//fun declaration
+            document.getElementById('show').innerHTML = 'Peter';
+
+        }
+
+        show();//calling function
+
+        //example - 2
+        //parameterized and non-paramaterized function are there
+
+        //paramaterized function
+        function add(a, b) { //a,b parameters
+            document.getElementById('show1').innerHTML = a + b;
+
+        }
+        add(5, 6);//5,6 arguments
+
+
+        //ES6- ECMA Script - Enhanced version of Java
+     /*   ECMA                    vanila script
+        let const used           not used
+       arrow fuction creat    above fun can create*/
+
+       //example3
+          //arrow function or anonymous function or non-Parameterized fun
+          const display=()=>{
+            document.getElementById('show2').innerHTML = 'Peter in Arrow Function';
+
+          }
+
+          display();
+
+          
+          //example4
+          const display2=(name,age)=>{
+         //    document.getElementById('show3').innerHTML = 'The name is  '+name+' the age is '+age;
+            document.getElementById('show3').innerHTML = `The name is  ${name} the age is ${age}`; //use above tab key ` called as bactics
+            }
+          display2('Peter',99);
+
+
+          //example5
+
+          function coffee(name,size){
+            //return name,size
+            return `the ${name} coffer of ${size} size is ready`;
+          }
+
+          //coffee('Latta','Medium')
+          document.getElementById('show4').innerHTML =coffee('Latta','Medium');
+  
+          //example-6
+//immediately invoke function
+         ( function disp(){ 
+            console.log('show function');
+          })();
+        
+          //example7
+          const a=((a)=>{
+            console.log('hello',a);
+          })(99);
+          
+          //example8
+          const b=()=>{
+            console.log('hello');
+          };
+          b();
+          const display3=name=>{
+            let a='2';
+            console.log('the name is '+name);
+            
+          }
+          display3('vijay');
+//error
+/*
+          const display4==>{
+            let a='2';
+            console.log('the name is '+name);
+            
+          }
+          display4('vijay');
+          */
+//error
+/*
+          const display4=name,empid=>{
+            let a='2';
+            console.log('the name is '+name);
+            
+          }
+          display4('vijay');
+          */
+          const display5=(Empid,name)=>{
+            let a='2';
+            console.log('the name is '+name);
+            //major difference
+            console.log('the empid is ',Empid+12);
+            console.log('the empid is '+ Empid+12);//+use for string
+            console.log(a+2);
+            console.log(Empid + name);
+          }
+
+          display5(121,'Thor');
+
+           //example 9
+     /*    const outer=()=>{
+             console.log('outer function');
+            const inner=()=>{
+                console.log('inner function');
+             }
+             inner();
+         }
+        outer();
+        */
+
+//example10
+           /* const outer2=()=>{
+      console.log('outer function');
+         const inner=()=>{
+             console.log('inner function');
+          }
+           return inner;
+      }
+     outer2();
+     */
+
+     //example11
+     const outer3=()=>{
+      console.log('outer function 3');
+     const inner=()=>{
+         console.log('inner function 3');
+      }
+       return inner;
+  }
+ outer3()();//parent and child called at a time
+
+ const outer4=(a)=>{
+  console.log('outer function 4',a);
+ const inner=(b)=>{
+     console.log('inner function 4',b);
+  }
+   return inner;
+}
+outer4(99)(90);
+
+   //example 12
+   let p=99;
+   function show(a) {
+       console.log('hnvbv');
+       // return a;
+   }
+   console.log(p);
+   console.log(show(9));
+   // show(9);
+
+
+
+   function real(){
+    console.log('real function');
+   }
+
+   const nonreal=()=>{
+    console.log('non real function');
+   }
+
+   console.log(real);//real,direct,shows f in console
+   console.log(nonreal);//not a real fun ,indirect fun,not shows f in console
+
+   const c=()=>{
+    console.log('c');
+    return 5;
+  };
+  const z=c;
+  console.log(z());//undefine included if not return
+//error
+/*
+  const c1=()=>{
+    console.log('c');
+    return 5;
+  };
+  const z1=c1();
+  console.log(z1());
+*/
+  </script>
+</body>
+
+</html>

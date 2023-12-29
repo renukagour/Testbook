@@ -1,0 +1,25 @@
+<!-- Display random links in your code, 
+    using Math.random() method and conditions. 
+    TheMath.random() generates random numbers 
+    if that number is less than 1 that display aLinkedInlink in the output,
+     else displayindeedlink in theoutput. -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Math.random()</h2>
+    <p id="demo"></p>
+    <script>
+        let text; if (Math.random() <1 ) {
+            text = "<a href='linkedin.com'>LinkedIn</a>";
+            document.write(Math.random());
+        } else { 
+            text = "<a href='indeed.com'>Indeed</a>"; 
+            document.write(Math.random());
+        }
+     document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+
+</html

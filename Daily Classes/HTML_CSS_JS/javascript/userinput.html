@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>User Input in JS</h1>
+    <form id="userform">
+
+        <label for="name"> Enter Name :</label>
+        <input type="text" id="name" required>
+        <!-- <button onclick="details(e)">Submit</button> -->
+        <button>Submit</button>
+        <!-- //to dispaly in console since from is refresing after click -->
+    </form>
+    <script>
+
+function details(e){
+    e.preventDefault();//to dispaly in console since from is refresing after click
+    let name=document.getElementById('name').value; //store value of input name in name
+    console.log(name);
+}
+document.getElementById('userform').addEventListener('submit',details)//to dispaly in console since from is refresing after click
+
+
+    </script>
+</body>
+</html>
