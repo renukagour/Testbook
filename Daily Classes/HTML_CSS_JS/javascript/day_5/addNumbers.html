@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name"></label>
+    <input type="text" id="num1" name="num1" placeholder="Enter First number"><br><br>
+    <input type="text" id="num2" name="num2" placeholder="Enter second number"><br><br>
+    <p id="result"></p><br><br>
+    <button onclick="addnumber()">Add</button>
+
+    <script>
+function addnumber(){
+    var num1=parseFloat(document.getElementById('num1').value);
+    var num2=parseFloat( document.getElementById('num2').value);
+    console.log('num1 ',typeof(num1));
+    console.log('num2 ',typeof(num2));
+    var result=num1+num2;
+    document.getElementById('result').innerHTML=result;
+}
+    </script>
+</body>
+</html>
