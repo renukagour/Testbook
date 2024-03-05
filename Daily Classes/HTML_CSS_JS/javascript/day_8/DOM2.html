@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1>DOM in JS</h1>
+    <div id="divid"></div>
+    <script>
+let divID=document.getElementById('divid');
+//divID.innerHTML='<p>this is para<p>'
+ //   console.log(divid);
+   const creatediv= document.createElement('div');
+creatediv.innerHTML="this is created by me";
+divID.appendChild(creatediv);
+
+    </script>
+</body>
+</html>

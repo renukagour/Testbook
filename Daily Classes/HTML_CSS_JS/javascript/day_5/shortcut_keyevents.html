@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Shortcuts using Key Events </h1>
+    <script>
+        document.addEventListener('keyup', (e) => {
+            // if(e.key=='w'){
+            // alert("Hello Renu"); //it gives output for both w and W
+                                    // if capslock on it not gives ouput
+            // }
+            //if (e.key == 'z' && e.ctrlKey) {
+             //   alert("Hello Renu");
+            //}
+            if (e.key == 's' && e.ctrlKey) {
+                e.preventDefault();//it prevent by default nature of ctrl+s is save 
+               
+                alert("Hello Renu"); //itshows both save and alert to prevent use above
+         
+            }
+     
+        });
+    </script>
+</body>
+
+</html>

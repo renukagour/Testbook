@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 15px;
+            border: 1px solid black;
+        }
+        div,section{
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid  lightcoral;
+        }
+        a{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://google.com" target="_blank" id="navlink"><span>Google</span></a>
+    <!-- i want to change Google to wikipdia and href also chane to wikipedia without html  -->
+    <!-- DOM ka kam yahi hota h ki bina html file 
+        it can change the property of element -->
+    <div id="main">
+        <!-- innertext not show formatting while textcontent shows formatting -->
+        <p>Para</p>
+        <span>span tag</span>
+        <section>section tag</section>
+    </div>
+    <h1>Accessing Elements in DOM</h1>
+    <h2>ID (#demo)</h2>
+    <div id="demo">Access me by ID</div>
+    <h2>Class (.demo1)</h2>
+    <div class="demo1">Access me by class (1)</div>
+
+    <h2>Tag (Section)</h2>
+    <section>This is Tag Access by (1)</section>
+    <section>This is Tag Access by (1)</section>
+
+    <h2>Query Selector Access</h2>
+    <div id="QuerySelector1">Access me by id in QuerySelector1</div>
+    <div id="QuerySelector2">Access me by id in QuerySelector2</div>
+    <div id="QuerySelector3">Access me by id in QuerySelector3</div>
+    <script>
+        let navdata=document.getElementById('navlink');
+       
+        navdata.textContent
+        
+        navdata.innerHTML
+        
+        navdata.innerHTML="wikipedia"
+       
+        navdata.href
+       
+        navdata.href="www.wikipedia.com"
+    </script>
+</body>
+</html>
+<!-- document object is used change property and style  of body and
+by id you change property  the that element also and style it alo -->
+<!-- document  object  is used to access each element
+document.getElementById
+document.getElementsByClassName   
+document.getElementsByTagName
+document.querySelector
+document.querySelectorAll -->

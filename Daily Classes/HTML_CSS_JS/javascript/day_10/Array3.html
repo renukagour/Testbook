@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array Search Methods</h1>
+    <script>
+        let fruits = ['apple', 'banana', 'watermelon', 'strawbery', 'mango', 'kiwi', 'orange'];
+       /* let summer = fruits.splice(0, 5);
+        console.log(summer);
+        let winterindexstart = fruits.indexOf('kiwi');
+        let winter = fruits.splice(winterindexstart);
+        console.log(winter);*/
+
+        let days=[4,5,3,7,88,92,63,10];
+        console.log(fruits.sort());
+        console.log(days.sort());// 10, 3, 4, 5, 63, 7,88,92
+        console.log(days.sort(function (a,b){ // 3, 4, 5,7,10,63,88,92
+           console.log(a,b,a-b);
+            return a-b;
+        }));
+
+
+
+    </script>
+</body>
+
+</html>
+<!-- hw--
+lastindexof
+find
+findindex
+findlast
+findlastindex -->

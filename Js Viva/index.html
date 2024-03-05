@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p><br>
+<div id="demo1"></div><br>
+    <button id="btn" onclick="show()">Click me</button>
+    <script>
+       const demo= document.getElementById('demo');
+       function show(){
+        demo.innerHTML="this is para content";
+       }
+       
+    //   const demo1=document.getElementById('demo1').innerHTML=document.createElement('h1').textContent="this is h1 tag";
+    //   document.createElement('h1').appendChild("this is h1 tag");
+      // const demo1=document.getElementById('demo1').appendChild( document.createElement('H1').appendChild(document.createTextNode("this is h1 tag")));
+      const h=document.createElement("H1");
+      var t=document.createTextNode("this is h1 tag");
+      h.appendChild(t);
+      document.getElementById('demo1').appendChild(h);
+    </script>
+</body>
+</html>

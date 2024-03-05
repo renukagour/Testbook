@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 15px;
+            border: 1px solid black;
+        }
+        div,section{
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid  lightcoral;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Accessing Elements in DOM</h1>
+    <h2>ID (#demo)</h2>
+    <div id="demo">Access me by ID</div>
+    <h2>Class (.demo1)</h2>
+    <div class="demo1">Access me by class (1)</div>
+    <div class="demo1">Access me by class (2)</div>
+<!-- classes store by array 
+hence direct cant access
+we have to access by index -->
+    <h2>Tag (Section)</h2>
+    <section>This is Tag Access by (1)</section>
+    <section>This is Tag Access by (1)
+        <section>this is nested section tag</section>
+    </section>
+    <p><section>section inside p</section></p>
+
+    <h2>Query Selector Access</h2>
+    <div id="QuerySelector1">Access me by id in QuerySelector1</div>
+    <div class="QuerySelector2">Access me by class in QuerySelector2</div>
+    <div class="QuerySelector3">Access me by class in QuerySelector3</div> 
+
+    <h2>Query SelectorAll Access</h2>
+    <div id="QuerySelectorall1">Access me by id in QuerySelectorall1</div>
+    <div class="QuerySelectorall2">Access me by class in QuerySelectorall2</div>
+    <div class="QuerySelectorall3">Access me by class in QuerySelectorall3</div> 
+    <script>
+        //queryselector is in which you can access all like tag,id,class
+    const demoquery=document.querySelector('#QuerySelector1');
+    console.log(demoquery);
+    demoquery.style.border='2px solid green';
+    const demoquery2=document.querySelector('.QuerySelector2');
+    console.log(demoquery2);
+    demoquery2.style.border='2px solid brown';
+    //query selector selectone at time so using array not usable
+    const demotag=document.querySelector('section');
+    console.log(demotag);
+    demotag.style.border='2px solid brown'; //only one section will affect
+    //so use queryselrctor all for this purpose
+    //queryselectorall stores in arrays
+    const demotag2=document.querySelectorAll('section');
+    console.log(demotag2);
+    for(i=0;i<4;i++){
+    demotag2[i].style.border='2px solid blue';
+    }
+        
+    </script>
+</body>
+</html>

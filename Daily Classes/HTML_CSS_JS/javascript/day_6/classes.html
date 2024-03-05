@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Classes in HTML</h1>
+    <p id="para"></p>
+    <script>
+       /* class student {
+            constructor() {
+                console.log("constructor ");
+                //let roll=90;//1
+                this.roll = 90; //2
+                console.log(this);//shows this belong to which
+            }
+            name = "pitter"; //let not used here
+            uid = 89;
+        }
+        let s = new student();
+        //console.log(student);
+        console.log(s.uid);
+        console.log(s.roll);//not shown in console=undefine for 1 so use 2
+        console.log('this', this);//refer to window
+        */
+
+        let  studentdetail={
+            name:"pitter",
+            uid:90,
+            design:"student in rit"
+
+        }
+        console.log(studentdetail);
+        console.log(studentdetail.name);
+        document.getElementById('para').innerHTML=studentdetail;//shows [object Object]
+        document.getElementById('para').innerHTML=studentdetail.name;//pitter
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <script>
+        const cartoons=[['pikachu','mickey mouse','doreamon'],['naruto','poweful girls','barbie'],
+        ['peppa pig','popeye','shinchan']]
+        const D2_1=performance.now();//cal time upto this line
+        for(let i=0;i<cartoons.length;i++){
+            for(let j=0;j<cartoons.length;j++){
+                console.log(cartoons[i][j],'is at index ',i,j);
+            }
+        }
+        const D2_2=performance.now();
+        const newCartoons=cartoons.flat();//2D to 1D
+      //  console.log(cartoons);
+        //console.log(newCartoons);
+        const D1_1=performance.now();
+        for(let j=0;j<newCartoons.length;j++){
+            console.log(newCartoons[j],'is at index '+j);
+        }
+        const D1_2=performance.now();
+        console.log("2D array time is ",D2_2-D2_1);
+        console.log("1D array time is ",D1_2-D1_1);
+    </script>
+</body>
+</html>

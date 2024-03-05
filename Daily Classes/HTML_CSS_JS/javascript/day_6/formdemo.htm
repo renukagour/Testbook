@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>form using Object</h1>
+
+
+    <input type="text" id="sname"><br><br>
+    <input type="number" id="age"><br><br>
+    <input type="number" id="roll"><br><br>
+    <p id="info"></p>
+    <button id="btn" onclick="showdetails()">Submit</button>
+
+    <div id="para1"></div>
+    <div id="para2"></div>
+    <div id="para3"></div>
+
+    <script>
+        const para1 = document.getElementById('para1');
+        const para2 = document.getElementById('para2');
+        const para3 = document.getElementById('para3');
+        function showdetails() {
+            //  let name = document.getElementById('sname').value;
+            //var age = document.getElementById('age').value;
+            //var roll = document.getElementById('roll').value;
+            let info={
+                name : document.getElementById('sname').value,
+            age : document.getElementById('age').value,
+            roll: document.getElementById('roll').value
+        }
+        para1.innerHTML = `name =  ${info.name}`;
+        para2.innerHTML = `age = ${info.age}`;
+        para3.innerHTML = `roll = ${info.roll}`;
+        console.log(info.name);
+        console.log(info.age);
+        console.log(info.roll);
+    }
+
+        const btn = document.getElementById('btn');
+        //btn.addEventListener('click',showdetails());
+    </script>
+</body>
+
+</html>

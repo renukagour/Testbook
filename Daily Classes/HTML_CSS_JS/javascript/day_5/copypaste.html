@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Forms in JavaScript</h1>
+    <!-- <form action=""> -->
+        <!-- <input type="text"  value="welcome" oncopy="return false"><br><br> -->
+                                             <!-- //it stops copying of data        -->
+        <!-- <input type="text" onpaste="return false;"> -->
+                          <!-- it stops pasting of data -->
+    <!-- </form> -->
+    <p id="para"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Tempore sunt dolores nesciunt sed? Odio blanditiis laboriosam, earum delectus ut 
+        et pariatur nisi necessitatibus dolorem, quasi, alias voluptatibus eum ad eius.</p>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <script>
+let para=document.getElementById('para');
+para.addEventListener('copy',function(event){
+    event.preventDefault();
+    return false;
+});
+text.addEventListener('paste',function(event){
+    event.preventDefault();
+    return false;
+});
+    </script>
+    <!--SELF STUDY =>
+        Events => 
+           forms
+           change focus blur
+           windows events- load resize scroll
+           network event
+           drag and drop
+           touch 
+           media events -play pause end
+
+ -->
+</body>
+</html>

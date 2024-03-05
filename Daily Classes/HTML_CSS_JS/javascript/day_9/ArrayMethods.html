@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array Methods in html</h1>
+    <p id="demoarr"></p>
+    <p id="demoarr1"></p>
+    <script>
+        // let fruits = ['apple', 'banana', 'strawbery', 'mango', 'orange'];
+        //document.getElementById('demoarr').innerHTML = fruits.length;//property we are not used bracket
+        // var arr; //undefined
+        //var arr=[]; //0
+        //console.log(arr,arr.length)
+
+        // document.getElementById('demoarr').innerHTML =fruits.length;//5
+        //  document.getElementById('demoarr1').innerHTML =fruits.toString().length; //35 counts characters
+
+        // fruits[9]='kiwi'
+        //document.getElementById('demoarr').innerHTML =fruits;
+        //console.log(fruits);
+        //console.log(fruits.length); //10
+
+
+        //delete fruits[2]; //this delete only value but not space
+        //not a good so dont use
+        // document.getElementById('demoarr').innerHTML =fruits;
+        //console.log(fruits);
+        // console.log(fruits.length); //5
+
+        //above all static example
+
+        //dynamic 
+       // let fruits = ['apple', 'banana', 'strawbery', 'mango', 'orange'];
+       // fruits.push('kiwi');
+        //  document.getElementById('demoarr').innerHTML = fruits;
+        //document.getElementById('demoarr1').innerHTML = fruits.length;
+        // console.log(fruits);
+        //console.log(fruits.length);
+
+        // fruits.pop();
+        //document.getElementById('demoarr').innerHTML = fruits;
+        //document.getElementById('demoarr1').innerHTML = fruits.length;
+        //console.log(fruits);
+        //console.log(fruits.length);
+
+        //console.log(fruits); //delete 1st element and adjust
+        //fruits.shift();
+        //document.getElementById('demoarr').innerHTML = fruits;
+        //document.getElementById('demoarr1').innerHTML = fruits.length;
+        //console.log(fruits);
+        //console.log(fruits.length);
+
+        /* fruits.unshift("pineapple"); //add to 1st
+         document.getElementById('demoarr').innerHTML = fruits;
+         document.getElementById('demoarr1').innerHTML = fruits.length;
+         console.log(fruits);
+         console.log(fruits.length);
+ 
+        */
+
+        //splice method
+      //  fruits.splice(2, 0, 'chickoo'); //add at what position,delete how many,data
+       // console.log(fruits);
+       // console.log(fruits.length);
+        //fruits.splice(3,0,'kiwi','pineapple')
+        // console.log(fruits);
+        //console.log(fruits.length);
+
+        //fruits.splice(3,'beetroot', 'pineapple');//not consider beetroot and move ahead
+      //  console.log(fruits);
+       // console.log(fruits.length);
+  
+      //  fruits.splice(2,1,'beetroot', 'pineapple');//after 2 1 elementi.e. 2index  deleted and then added
+       // console.log(fruits);
+        //console.log(fruits.length);
+
+       // fruits.splice(1,1); //1 index i.e. banana deleted
+        //console.log(fruits);
+        //console.log(fruits.length);
+
+        //tospliced in es2023
+      /*  let newfruits=fruits.toSpliced(1,1);
+        console.log(fruits); //do not change original array
+        console.log(newfruits);
+*/
+        //slice method
+  //      let flowers=['roses','lily','lotus','marigold','jasmine','sunflower'];
+      /*  let newflower=flowers.slice(3);
+        console.log(flowers);
+        console.log(newflower);//from 4th index gets all value and store it
+*/
+       
+   /*     let newflower=flowers.slice(3,5);//including 3 to  excluding 5 
+        console.log(flowers);
+        console.log(newflower);
+         
+*/
+
+//concat method
+let winter=['dec','jan'];
+let spring=['feb','march'];
+let summer=['apr','may','june'];
+let mansoon=['july','aug'];
+let autumn=['sept','oct','nov'];
+let winsum=winter.concat(summer);
+console.log(winsum);
+let sumwin=summer.concat(winter);
+console.log(sumwin);
+let sumwinspr=spring.concat(winter,summer);
+console.log(sumwinspr);
+    </script>
+</body>
+
+</html>

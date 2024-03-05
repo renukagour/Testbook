@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = 5;
+        for (let i = 1; i <= n; i++) {
+          //  for (j = 0; j < i; j++) {
+            let str="* "  
+            console.log(str.repeat(i));
+            //}
+        }
+        for (let i = 1; i <= n; i++) {
+            
+              let str="* " ;
+              let space="  "; 
+              console.log(space.repeat((n-i))+str.repeat(i));
+           
+          }
+          for (let i = n; i >= 1; i--) {
+            
+            let str="* " ;
+            let space="  "; 
+            console.log(space.repeat((n-i))+str.repeat(i));
+         
+        }
+        
+for (let i = n; i >= 1; i--) {
+    let str = "* ";
+    console.log(str.repeat(i));
+}
+    
+    </script>
+</body>
+
+</html>

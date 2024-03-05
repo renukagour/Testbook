@@ -6,16 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    
         <input type="text" id="num1"><br><br>
         <input type="text" id="num2"><br><br>
         <input type="text" id="num3"><br><br>
        
-        <button onclick=" show()">show</button>
-    </form>
+        <button id="btn" onclick=" show()">show</button>
+
+ 
 
     <script>
         var num1;
+        
         function show(){
          num1=document.getElementById('num1').value;
          console.log('num1 = ',num1);
@@ -23,8 +25,12 @@
          console.log('num2 = ',num2);
          var num3=document.getElementById('num3').value;
          console.log('num3 = ',num3);
+       
+         
         
     }
+    const btn=document.getElementById('btn');
+    btn.addEventListener('click',show());
     
     </script>
 </body>

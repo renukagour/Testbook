@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Objects in JS</h1>
+    <p id="demo"></p>
+    <script>
+        //this is objects
+        let studentdetail = {
+            name: "pitter",
+            uid: 90,
+            design: "student in rit",
+            display: function(){
+                console.log('inside display ',this);
+            }
+
+        }
+       // studentdetail.display();
+      //  console.log("outside",this);
+        //console.log(studentdetail);
+
+        //document.getElementById('demo').innerHTML = studentdetail.name;
+
+      //  function show(){
+        //    console.log(this);
+        //}
+        //show(); // shows window i.e. this only work wit objects or classes 
+
+        function democonstructor1(title1,author1){
+            
+            console.log(title1);
+      }
+      //object of function
+      let mydemo1=new democonstructor1("abcs","xyzf");
+      console.log(mydemo1.title1); //undefined so use this keyword
+        
+        function democonstructor(title,author){
+              this.title=title;
+              this.author=author;
+              console.log(this.title,this.author);
+        }
+        //object of function
+        let mydemo=new democonstructor("abc","xyz");
+        console.log(mydemo.title,mydemo.author);
+    </script>
+</body>
+
+</html>

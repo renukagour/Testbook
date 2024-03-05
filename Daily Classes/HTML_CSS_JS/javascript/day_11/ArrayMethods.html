@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array Methods</h1>
+    <p id="circle"></p>
+    <script>
+        let fruits = ['apple', 'banana', 'strawbery', 'mango', 'orange'];
+        /* console.log(fruits.length);
+         for (let i = 0; i < fruits.length; i++) {
+             console.log(fruits[i]);
+         }
+         fruits.map((fruits)=>console.log('using map '+fruits))
+ 
+         */
+        //example
+       // let circle = [10, 20, 30];
+      /*  let areas=[];
+        let are=0;
+        for (let i = 0; i < circle.length; i++) {
+             are=circle[i]*circle[i]*3.14;
+            areas.push(are);
+           
+        }
+        document.getElementById('circle').innerHTML=areas;
+*/
+//let areas=circle.map((r)=>3.14*r*r); //same work as for loop
+/*let areas=circle.map((r)=>{
+    console.log(r)});
+document.getElementById('circle').innerHTML=areas;
+console.log(typeof(areas));//object
+//map automatcally create another array 
+*/
+
+/*let circle = [10, 20, 30];
+let areas=circle.forEach((r)=>{
+    console.log(r)});
+    console.log(typeof(areas));//undefined
+
+*/
+
+//filter
+let student=[
+{name:"peter",uid:48,marks:100},
+{name:"jon",uid:49,marks:98},
+{name:'tony',uid:50,marks:95},
+{name:"potter",uid:51,marks:98},
+{name:"jony",uid:52,marks:88},
+{name:'lily',uid:53,marks:86}
+];
+
+let highestmark=[];
+for(let i=0;i<student.length;i++){
+    if(student[i].marks>90)
+      console.log(student[i].name," "+student[i].marks);
+}
+    </script>
+</body>
+
+</html>
+<!-- map
+foreach
+filter
+find 
+reduce -->
