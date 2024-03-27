@@ -29,7 +29,7 @@
 
 // marks.sort();
 // console.log(marks);
-// console.log(marks.reverse());
+// console.log(marks.reverse()); 
 // console.log(marks);
 // let arr=[3,2,5,8,9,6,2];
 
@@ -46,7 +46,21 @@
 // console.log(arr.indexOf(2));//if element present many times  => first occurence inedx
 // console.log(arr.lastIndexOf(2)); //last occurence index
 
-let a=[3,2,5,8,9,6,2];
-console.log(a.includes(90));
-console.log(a.includes(9));
-
+//let a=[3,2,5,8,9,6,2];
+//console.log(a.includes(90));
+//console.log(a.includes(9));
+//syntax find
+//array.find(function(currentValue, index, arr), thisValue)
+let array = [2, 7, 8, 9];
+let found = array.find(function (element) {
+    return element > 4;
+});
+console.log(found);//7
+const myArr = [[1,2],[3,4],[5,6]];
+const newArr = myArr.flat();
+console.log(newArr);//[1,2,3,4,5,6]
+// lastindexof
+// find
+// findindex
+// findlast
+// findlastindex
