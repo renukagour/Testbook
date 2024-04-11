@@ -1,0 +1,31 @@
+constant time complexity => Big O of 1 => O(1) =>Doesn't depend upon input size throghout same complexity
+Ex. Addition of 2 no.s
+sum of fist natural no. = n(n+1)/2
+
+linear time complexity => (input size increase = increase in complexity) and vice versa => O(n) => all n power to the 1 like 2n+1 ,n\7 etc.
+Ex. => sum of elements in array
+O(n/2)~~O(n)
+Always straight line graph
+
+Quaadratic time complexity => O(n^2) 
+n^3+n^2+n+5 => O(n^3) => always cosider biggest power.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
