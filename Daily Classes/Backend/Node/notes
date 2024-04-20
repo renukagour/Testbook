@@ -1,0 +1,6 @@
+Every code their run time environment to run
+Node --->
+   single thread -- more fast
+   asynchronous
+   javascript runtime environment
+   
