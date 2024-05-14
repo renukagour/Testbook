@@ -1,0 +1,31 @@
+Application of Node.js
+ Creating REST APIs -- A REST API is a communication channel between the fronted and backend application
+ Creating real time services -- The asynchronous nature of Node enables real-time even-driven programming
+ Building microservices -- since Node works on a per package basis. It is well equipped to build microservices that are similar and faster as opposed to using bulky frameworks
+ Developing tools -- Node can  be used to create efficient tools that assist developers to get real-time feedback and analytics, thus improving the overall experience the application
+
+npm- worlds largest software library
+   - default package manager for the js runtime environment node.js
+   
+open-source developers use npm to share software. Organization also use npm to manage private development.
+
+npm consist the following :--
+    - a command line client also called npm
+    - an online database of public and paid-for private packages called npm registry.
+
+json- server to server communication (ex. Payment)
+
+Converting text to json object ---JSON.parse(jsonString)
+
+Converting json object to String ---JSON.stringify(jsonObject)
+
+AJAX ---> communication between your client and server
+HTTP methods -->get, post, put, patch, delete
+
+MVC- Model View Controller
+Model      -- responsible for maintaining data -- actually connected to database -- so anything you do with data
+           -- adding or retrieving data is done in the model component --- responds to control request
+View       -- data representation is done by view -- generates UI for user -- views are created by data which is 
+              collected by the model component but these data aren't taken directly but through the controller, so the view only speaks to the controller 
+Controller -- component that enables the interaction between view and model -- doesn't have to worry about handling 
+              data  it just tell the model what to do --after receiving data from model it processes it and then it takes all that info and sends it to view and explain how to represent user

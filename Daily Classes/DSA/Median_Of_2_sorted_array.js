@@ -13,7 +13,9 @@ var findMedianSortedArrays = function (nums1, nums2) {
     for (let i = 0; i < m; i++) {
         num3.push(nums2[i]);
     }
-    num3.sort()
+    num3.sort(function (a,b){
+        return a-b;
+    })
     console.log(num3)
     let median;
     let l = num3.length;

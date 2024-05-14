@@ -6,5 +6,5 @@ function generate (s,seq,i){
  generate (s,seq+s[i],i+1);
  generate (s,seq,i+1);
 }
-let s="abc";
+let s="abcd";
 generate(s,"",0);

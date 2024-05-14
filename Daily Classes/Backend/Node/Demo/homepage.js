@@ -1,0 +1,1 @@
+console.log("hello this is our JS home page");

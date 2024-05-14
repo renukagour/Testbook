@@ -1,2 +1,2 @@
-res = binarySearch(arr, 7, 0, n - 1);
+res=binarySearch(arr,7)
 // console.log(res);

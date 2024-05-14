@@ -20,6 +20,7 @@ for (i = 0; i < n; i++) {
     }
     else {
         word += s[i];
+        console.log(word);
     }
 }
 //do not reverse last

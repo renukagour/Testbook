@@ -1,4 +1,4 @@
-// String are immutable -> once it it created canot modify
+// String are immutable -> once it it created cannot modify
 // let s = "Hello";
 // console.log(s); //s->Hello
 
@@ -21,7 +21,7 @@
 // let n=s.length;
 // for (let i = 0; i < n; i++) {
 //   console.log(s[i]);
-// //   console.log(s.charAt(i));
+//   console.log(s.charAt(i));
     
 // }
 // console.log(s.charAt(10)); //space
@@ -34,14 +34,14 @@
 // console.log(s2,s);
 
 // let s="Testbook";
-// // let s1=s.substring(0,4); //4 excluded
+// let s1=s.substring(0,4); //4 excluded
 // let s1=s.substring(4); 
 // console.log(s1);
 
 
 let s="  Hello, I am Renu   ";
 let s1= s.trim(); //remove leading and trailling spaces 
-
+console.log(s1);
 console.log(s.length);
 console.log(s1.length);
 

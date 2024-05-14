@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal Traingle</title>
+</head>
+<body>
+    <script>
+        // 5.
+function printPascal(n) {
+    for (line = 1; line <= n; line++) {
+        var C = 1;// used to represent C(line, i)
+        for (i = 1; i <= line; i++) {
+            // The first value in a line is always 1
+            document.write(C + " ");
+            C = C * (line - i) / i;
+        }
+        document.write(" <br>");
+    }
+}
+var n = 6;
+printPascal(n);
+    </script>
+</body>
+</html>

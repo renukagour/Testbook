@@ -31,11 +31,11 @@ class LinkedList {
         temp.next = newNode;
     }
     deleteHead() {
-        if (this.head == null){
+        if (this.head == null) {
             console.log("Linked list is empty can not delete");
             return;
         }
-        
+
         this.head = this.head.next;
 
     }
@@ -64,34 +64,36 @@ class LinkedList {
         }
     }
 
-    middle(){
-        let temp=this.head;
-    let length=0;
+    middle() {
+        let temp = this.head;
+        let length = 0;
 
-    while(temp!=null){
-        length++;
-        temp=temp.next;
+        while (temp != null) {
+            length++;
+            temp = temp.next;
 
-    }
-    //reach the middle
-    let mid=Math.floor(length/2);
-    temp=this.head;
-    for(let i=1;i<=mid;i++){
-        temp =temp.next;
-    }
-    return temp;
+        }
+        //reach the middle
+        let mid = Math.floor(length / 2);
+        temp = this.head;
+        for (let i = 1; i <= mid; i++) {
+            temp = temp.next;
+        }
+        return temp.data;
     }
 }
 
 let l1 = new LinkedList();
+l1.insertAtHead(0);
 l1.insertAtTail(1);
 l1.insertAtTail(2);
 l1.insertAtTail(3);
+l1.insertAtTail(4);
 // let a = new Node(5);
 
 // console.log(l1);
 // l1.print();
-l1.insertAtHead(0);
+// l1.insertAtHead(0);
 l1.print();
 // l1.deleteTail();
 // l1.print();

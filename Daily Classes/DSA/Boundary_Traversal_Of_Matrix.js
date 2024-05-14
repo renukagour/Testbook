@@ -1,6 +1,6 @@
 // To print boundry matrix for n*m matrix
 //first print 1)First Row  direction ->  left to right i=0 and j=0 to m-1
-//   2)last column  top to bottom  j=m-1 and i=1 to n-1 not i=0 becoz do not to repeat j=m-1 and i=0 element
+// 2)last column  top to bottom    j=m-1 and i=1 to n-1 not i=0 becoz do not to repeat j=m-1 and i=0 element
 // 3)last Row   <- right to left   i=n-1 and j=m-2 to 0 same here
 // 4)first column bottom to top    j=0  and i=n-2 to 1
 
