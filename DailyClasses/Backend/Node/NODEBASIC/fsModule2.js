@@ -34,7 +34,16 @@ const fs=require('fs');
 // fs.rename('myfile.txt','myfile1.txt',()=>{});
 
 
-// creating file
+// creating multiple files
 
+for(let i=1;i<6;i++){
+    // fs.writeFileSync(`file-${i}.txt`,`This is my file-${i} data` )
+    // fs.writeFileSync(`file-${i}.csv`,`EmpName,EmpDept` )
+    // fs.writeFileSync(`file-${i}.csv`,`EmpName\nJohn, Doe\nMarie, Jane,EmpDept\nCSE,\nECE` )
 
+    fs.writeFileSync(`datafile/file-${i}.txt`,`This is my file-${i} data` )
+    fs.writeFileSync(`datafile/file-${i}.csv`,`EmpName\nJohn, Doe\nMarie, Jane,EmpDept\nCSE,\nECE` )
+}
+
+// copy data from one file to another file Pending
 

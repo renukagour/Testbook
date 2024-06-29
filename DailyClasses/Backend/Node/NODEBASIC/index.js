@@ -10,8 +10,8 @@
 //for array
 // const details=require('./second'); //import
 // console.log(details);
-// console.log(details.employeeDetails);
-// console.log(details.employeeDetails.dept);
+// console.log(details.employeeDetails); //undefined
+// console.log(details.employeeDetails.dept); //error
 // console.log(details.smartwork());
 // console.log(details[0]);
 

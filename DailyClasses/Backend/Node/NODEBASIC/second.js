@@ -14,7 +14,7 @@
 
 // smartwork();
 // hardwork();
-
+// module.exports=studentDetails; //first function will be executed
 // const employeeDetails={
 //     name:'john',
 //     eid:47,
@@ -25,6 +25,8 @@
 // module.exports=studentDetails;
 // module.exports=employeeDetails,hardwork,smartwork,studentDetails; //only first show
 // module.exports=hardwork,employeeDetails,smartwork,studentDetails;
+// module.exports=hardwork(),employeeDetails,smartwork,studentDetails;
+// module.exports=hardwork,employeeDetails,smartwork(),studentDetails; //first function will be executed
 
 // module.exports={employeeDetails,hardwork,smartwork,studentDetails};
 

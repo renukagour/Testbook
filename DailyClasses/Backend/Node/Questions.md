@@ -1,3 +1,5 @@
+# Questions
+
 1. What is Javascript?
   client side scripting language, high level programming
   asynchronous - callback , promises, async
@@ -15,7 +17,7 @@
    DOM Methods
 
 3. Variable
-   var -- function scoped variable --vanilla js
+   var -- global scope function scoped variable --vanilla js
    let -- block scoped variable --- es6
    const -- block scoped variable ---es6
    Why choose var over let and const?
@@ -34,5 +36,3 @@
    for in --- index
 
 5. Functions
-   
-   
