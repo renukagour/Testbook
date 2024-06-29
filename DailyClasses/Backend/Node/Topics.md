@@ -3,16 +3,16 @@
 ### MAIN FULL TOPICS
 
 >     Full Stack Program
-     -     HTML
-     -     CSS
-     -     JAVASCRIPT
-     -     NODE
-     -     EXPRESS
-     -     MONGODB
-     -     REACT
-     -     DSA
-     -     Git/Github
-     -     combo technologies ------- Docker, JAVA, Kotlin, CASSANDRA,
+ -  HTML
+ -  CSS
+ -  JAVASCRIPT
+ -  NODE
+ -  EXPRESS
+ -  MONGODB
+ -  REACT
+ -  DSA
+ -  Git/Github
+ -  combo technologies ------- Docker, JAVA, Kotlin, CASSANDRA,
                      ------- Business Logic -----For Example -----Payments
                      ------- System Design
 
