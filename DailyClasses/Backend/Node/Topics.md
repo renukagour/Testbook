@@ -2,17 +2,17 @@
 
 ### MAIN FULL TOPICS
 
-Full Stack Program
-  HTML
-  CSS
-  JAVASCRIPT
-  NODE
-  EXPRESS
-  MONGODB
-  REACT
-  DSA
-  Git/Github
-  combo technologies ------- Docker, JAVA, Kotlin, CASSANDRA,
+>     Full Stack Program
+     -     HTML
+     -     CSS
+     -     JAVASCRIPT
+     -     NODE
+     -     EXPRESS
+     -     MONGODB
+     -     REACT
+     -     DSA
+     -     Git/Github
+     -     combo technologies ------- Docker, JAVA, Kotlin, CASSANDRA,
                      ------- Business Logic -----For Example -----Payments
                      ------- System Design
 
@@ -27,7 +27,8 @@ Full Stack Program
        URL
        FS
        HTTP
---- 
+---
+
 ### Express
 
     Basic
@@ -37,7 +38,8 @@ Full Stack Program
     Access of APIs
     API Creation
     Routing
---- 
+---
+
 ### Mongodb
 
     Basic
