@@ -12,7 +12,7 @@
  -  REACT
  -  DSA
  -  Git/Github
- -  combo technologies ------- Docker, JAVA, Kotlin, CASSANDRA,
+-  combo technologies ------- Docker, JAVA, Kotlin, CASSANDRA
                      ------- Business Logic -----For Example -----Payments
                      ------- System Design
 

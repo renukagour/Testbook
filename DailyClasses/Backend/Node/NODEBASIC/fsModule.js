@@ -1,12 +1,12 @@
 // const fs=require('fs');
-// fs.readFile('myfile.txt', 'utf-8',(err,data)=>{
+// fs.readFile('myfile1.txt', 'utf-8',(err,data)=>{
 //     console.log(data); //give in ascii value so use above utf-8
 // })
 
 
 // without using utf-8
 // const fs=require('fs'); 
-// fs.readFile('myfile.txt', 'utf-8',(err,data)=>{ //here (err, data ) are callback function
+// fs.readFile('myfile1.txt',(err,data)=>{ //here (err, data ) are callback function
 //     console.log(data.toString()); 
 // })
 
@@ -18,12 +18,12 @@
 // synchronous way
 // do not use arrow function output will not get
 // const fs = require('fs');
-// const data=fs.readFileSync('myfile.txt');
+// const data=fs.readFileSync('myfile1.txt');
 // console.log(data.toString());
 // console.log("finished Reading");
 
 // read multiple files together
-// const files=['myfile.txt','myfile2.txt'];
+const files=['myfile1.txt','myfile2.txt'];
 const fs = require('fs');
 // files.forEach((file)=>{
 //     const data=fs.readFileSync(file,'utf-8');
@@ -60,4 +60,4 @@ function readFileData(...filepaths) {
     })
 }
 
-readFileData('myfile.txt', 'myfile2.txt', 'myfile3.txt', 'myfile4.txt')
+readFileData('myfile1.txt', 'myfile2.txt', 'myfile3.txt', 'myfile4.txt','myfile5.txt')

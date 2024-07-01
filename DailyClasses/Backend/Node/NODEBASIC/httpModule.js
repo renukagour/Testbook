@@ -1,12 +1,12 @@
-// const http=require('http');
-// const server=http.createServer((req,res)=>{
-//     res.end('<h1>Your Google Page</h1>');
-// })
+const http=require('http');
+const server=http.createServer((req,res)=>{
+    res.end('<h1>Your Google Page</h1>');
+})
 
-// server.listen(5000);
+server.listen(5000);
 
-const http = require('http');
-const server = http.createServer((req, res) => {
+// const http = require('http');
+const server1 = http.createServer((req, res) => {
     if (req.url == '/') {
         res.end('<h1> Your home page</h1>');
 
@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
         res.write('<h1> Your about 1 page</h1>'); 
         res.end('<h1> Your about  2 page</h1>');// it is return statement so after it not any code  will be executed
     }
-    else if (req.url == '/contact') {
+    else if (req.url == '/contact') { 
         res.end('<h1> Your contact page</h1>');
     }
     else {
@@ -28,4 +28,4 @@ const server = http.createServer((req, res) => {
     }
 })
 
-server.listen(5000);
+server1.listen(5001);

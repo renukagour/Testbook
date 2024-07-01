@@ -22,7 +22,7 @@ Third -party module -- need to install
 node i -g nodemon -- when you save file it will automatically run just type nodemon index (here -g --- global it will install globally)
 
 os--8447893504 byte=7.86 GB total ram
-  --1714806784 byte=1.59 GB available ram
+  --1714806784 byte=0.669 GB available ram
 
 Server ==> physical format data ;
 Cloud ==> virtual data , one type of server , it also a physical storage like Data Center -
@@ -34,10 +34,18 @@ HTTP ==>
  hypertext-- the content will be shown in browser
  Application layer Protocol
 
+  it's a set of rules that allows users to transfer files over the web. HTTP is the foundation of the World Wide Web (WWW) and is used to load web pages using hypertext links
+
 HTTPS ==> HTTP Secured --provides more security than old version
 URL - Universal Resource Locator -- that will be in search bar like localhost:5000
 
 FS ==> To do Operations on Files
        Operations like read, write
+        system files as well as local files.
 
 HW ==> Backend live class 4
+       searching of some files which dsa will be used?
+
+Stream ==> bina ruke service provide karte ho match dekh pate ho.
+
+Expreess --> third party module --  node js framework --  
