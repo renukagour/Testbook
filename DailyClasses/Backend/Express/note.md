@@ -12,7 +12,11 @@ express middleware --
 http gives <h2> tag is it as a string in http -- content- Type -- text/plain -- if you want treat you have write text/html
 but in express it gives proper working of <h2>. -- by default is text/html
 
-routing 
+middleware --> when you accessing some website you need to fill the information and go forward
+there are two types of middleware
+predefined --> 
+user defined -->
+routing
 middleware
 get post put delete
 template engine

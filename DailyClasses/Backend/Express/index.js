@@ -1,6 +1,9 @@
 const express =require('express');
 
 const app =express();
+const path =require('path');
+
+app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/',(req,res)=>{
     res.send("<h1>Hello from home page</h1>");
@@ -13,7 +16,7 @@ app.get('/contact',(req,res)=>{
 })
 
 app.get('*',(req,res)=>{
-    // res.status(404);
+    // res.sta tus(404);
     res.send("<h2>Error page</h2>");
 });
 
