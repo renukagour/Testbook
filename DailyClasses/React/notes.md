@@ -63,10 +63,11 @@ SWC - Speed Web Compiler
 - .jsx -- javascript extension
 - always gives .jsx extension to all files like Navbar.jsx, Header.jsx
 - always first letter should be capital
+- rafce -- short cut
 
 ## Need to learn
 
-- What is JSX? <br>
+- What is JSX? ```<br>```
   JSX - JavaScript XML
   gives Permission to write js code in {}
 
