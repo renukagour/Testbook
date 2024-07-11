@@ -24,7 +24,7 @@ Since 2023 React new tool come in picture i.e. Vite
 - cd to your project
 - npm install
 - npm run dev
-- follow link for run[http://localhost:5173/]  
+- [follow link](http://localhost:5173/) for run
 SWC - Speed Web Compiler
 
 ## Folder Structure
