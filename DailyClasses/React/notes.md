@@ -15,7 +15,7 @@ Since 2023 React new tool come in picture i.e. Vite
 
 Since 2023 React new tool come in picture i.e. Vite
 
-# Steps
+## Steps
 
 - npm create vite@latest
 - give name to your project
