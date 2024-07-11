@@ -50,16 +50,27 @@ SWC - Speed Web Compiler
 
 - index.html
 
-## additional notes
-
-- .jsx -- javascript extension
-- always gives .jsx extension to all files like Navbar.jsx, Header.jsx
-- always first letter should be capital
-
-## flow
+## Flow
 
 - index.html <-- main.jsx <--App.jsx
 
 - App.jsx gives all files code to main.jsx
 
 - main.jsx gives all files code to index.html
+
+## Additional notes
+
+- .jsx -- javascript extension
+- always gives .jsx extension to all files like Navbar.jsx, Header.jsx
+- always first letter should be capital
+
+## Need to learn
+
+- What is JSX?
+  JSX - JavaScript XML
+  gives Permission to write js code in {}
+
+- What is Virtual DOM?
+  Virtual DOM - it is a representation of DOM in memory
+
+- What is Declarative Method?
