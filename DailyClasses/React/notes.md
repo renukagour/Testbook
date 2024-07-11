@@ -24,24 +24,40 @@ Since 2023 React new tool come in picture i.e. Vite
 - cd to your project
 - npm install
 - npm run dev
-- [follow link](http://localhost:5173/) for run
+- follow link [http://localhost:5173/] (<http://localhost:5173/>) for run
+
 SWC - Speed Web Compiler
 
 ## Folder Structure
 
 - src -- all source code or main code
-    - App.jsx -- main file
-    - index.jsx -- index file
-    - vite.config.js
-    - assets -- all images that are commonly used
+  - App.jsx -- main file -- Javascript+ html -- include all files
+  - index.jsx -- index file
+  - assets -- all images that are commonly used
+  - index.css -- css file
+  - main.jsx
 
 - public -- all static files
-    - all html files 
-    - css files
-    - images
+  - all html files
+  - css files
+  - images
+
+- index.html
 
 - package.json
 
 - vite.config.js
 
 - index.html
+
+## additional notes
+
+.jsx -- javascript extension
+
+## flow
+
+- index.html <-- main.jsx <--App.jsx
+
+- App.jsx gives all files code to main.jsx
+
+- main.jsx gives all files code to index.html
