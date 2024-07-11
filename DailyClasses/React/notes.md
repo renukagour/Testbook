@@ -63,7 +63,10 @@ SWC - Speed Web Compiler
 - .jsx -- javascript extension
 - always gives .jsx extension to all files like Navbar.jsx, Header.jsx
 - always first letter should be capital
-- rafce -- short cut
+- rafce -- short cut -- React Arrow Function Component export
+- rfc -- short cut -- React Function Component
+- rfce -- short cut -- React Function Component export
+- rafc -- short cut -- React Arrow Function Component
 
 ## Need to learn
 
@@ -71,7 +74,7 @@ SWC - Speed Web Compiler
   JSX - JavaScript XML
   gives Permission to write js code in {}
 
-- What is Virtual DOM?
+- What is Virtual DOM?  
   Virtual DOM - it is a representation of DOM in memory
 
 - What is Declarative Method?
