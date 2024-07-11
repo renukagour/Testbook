@@ -52,7 +52,9 @@ SWC - Speed Web Compiler
 
 ## additional notes
 
-.jsx -- javascript extension
+- .jsx -- javascript extension
+- always gives .jsx extension to all files like Navbar.jsx, Header.jsx
+- always first letter should be capital
 
 ## flow
 
