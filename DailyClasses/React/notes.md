@@ -67,7 +67,7 @@ SWC - Speed Web Compiler
 
 ## Need to learn
 
-- What is JSX? ```<br>```
+- What is JSX?
   JSX - JavaScript XML
   gives Permission to write js code in {}
 
