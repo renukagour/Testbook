@@ -67,6 +67,7 @@ SWC - Speed Web Compiler
 - rfc -- short cut -- React Function Component
 - rfce -- short cut -- React Function Component export
 - rafc -- short cut -- React Arrow Function Component
+- rcc -- short cut -- React Class Component
 
 ## Need to learn
 
@@ -76,5 +77,6 @@ SWC - Speed Web Compiler
 
 - What is Virtual DOM?  
   Virtual DOM - it is a representation of DOM in memory
+              - loads only that part of component that is changed not whole as real DOM
 
 - What is Declarative Method?
