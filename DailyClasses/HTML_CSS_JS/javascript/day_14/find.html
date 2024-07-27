@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .highlight {
+        background-color:yellow;
+    }
+</style>
+<body>
+    Search: <input type="text" id="search" oninput="searchText()">
+    <div id="document">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit placeat magnam mollitia accusamus, illo corrupti
+        totam omnis commodi vitae voluptas, amet numquam! Facere atque eum illum pariatur, vero rem tempora.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, porro itaque minus, officia repellat alias earum
+        iste odit minima ab quam aliquid perspiciatis architecto temporibus sed quia voluptatibus nobis quod error
+        laborum illo! Ipsam veniam, perferendis consequatur magnam vel officiis nam inventore, id cumque molestias a
+        commodi error temporibus ratione quas facilis? Rerum omnis laudantium, similique iste aliquid eaque repellat
+        aperiam, voluptate accusamus corporis a quos asperiores vitae doloribus inventore unde itaque accusantium ex
+        culpa exercitationem, perspiciatis mollitia est consequatur? Numquam error perferendis laudantium deserunt illum
+        dolorem totam quos sapiente tempore unde laborum modi possimus ipsam aperiam beatae eligendi, at expedita
+        maiores aliquid? Corporis, odit sequi. Similique sed dolorem, accusamus nam cum eveniet rem adipisci dolorum
+        sequi nulla qui repudiandae eaque reprehenderit id reiciendis saepe, quod aperiam autem accusantium, aliquid
+        quia minima ea vel quas? Mollitia laboriosam veritatis nesciunt consectetur molestias pariatur atque consequatur
+        aperiam fugiat maxime accusantium explicabo expedita illum provident dolore, soluta dolores id possimus numquam,
+        quis exercitationem facere reiciendis fugit. Odit officia sequi molestias ipsa vitae non est porro laboriosam
+        quas voluptatum nostrum, deleniti harum nisi consequuntur quam eaque cupiditate! Quia culpa odit sed atque
+        tempore eos facere, voluptates excepturi quo consequuntur hic quasi iusto! Atque, fugiat.</p>
+    </div>
+    <script>
+    function searchText() {
+        const searchinput = document.getElementById("search").value;
+        const documentContent = document.getElementById("document");
+        const SearchRegex = new RegExp(searchinput, "gi");
+        const text=documentContent.innerHTML;
+        const highlighetedText=text.replace(SearchRegex, match=>`<span class="highlight">${match}</span>`);
+        documentContent.innerHTML=highlighetedText;
+    }
+    // disable ctrl+f default behaviour
+    window.addEventListener("keydown", function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'f') { //ctrl not in mac so sometimes metakey used
+            e.preventDefault();
+            document.getElementById("search").focus();
+        }
+    });
+    </script>
+</body>
+
+</html>

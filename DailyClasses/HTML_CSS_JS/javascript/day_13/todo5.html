@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container" class="container mt-5">
+        <h1 class="text-center mb-4">Task Manager</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Enter Task">
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+            </div>
+        </div>
+        <div class="text-right mb-3">
+            <button class="btn btn-danger" onclick="clearSelectedTasks()">Clear Selected</button>
+            <button class="btn btn-warning ml-2" onclick="clearAllTasks()">Clear All</button>
+        </div>
+        <ul id="tasklist" class="list-group">
+
+        </ul>
+    </div>
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            const taskInput = document.getElementById('taskInput').value;
+            const TaskText = taskInput.trim();
+            if (TaskText !== '') {
+                tasks.push(TaskText);
+                document.getElementById('taskInput').value = ''; // Clear input field
+            } else {
+                alert('Enter Task');
+            }
+            showTask();
+        }
+
+        function showTask() {
+            const tasklist = document.getElementById('tasklist');
+            tasklist.innerHTML = '';
+            for (let i = 0; i < tasks.length; i++) {
+                const taskItem = document.createElement('li');
+                taskItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'mr-2';
+                checkbox.setAttribute('data-index', i);
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(tasks[i]));
+
+                const buttonContainer = document.createElement('div');
+
+                const buttonUpdate = document.createElement('button');
+                buttonUpdate.className = 'btn btn-warning btn-sm mr-2';
+                buttonUpdate.textContent = 'Update';
+                buttonUpdate.onclick = function() {
+                    updateTask(i);
+                };
+
+                const buttonDelete = document.createElement('button');
+                buttonDelete.className = 'btn btn-danger btn-sm';
+                buttonDelete.textContent = 'Delete';
+                buttonDelete.onclick = function() {
+                    deleteTask(i);
+                };
+
+                buttonContainer.appendChild(buttonUpdate);
+                buttonContainer.appendChild(buttonDelete);
+
+                taskItem.appendChild(buttonContainer);
+                tasklist.appendChild(taskItem);
+            }
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            showTask();
+        }
+
+        function updateTask(index) {
+            const newTask = prompt('Update Task', tasks[index]);
+            if (newTask !== null && newTask.trim() !== '') {
+                tasks[index] = newTask.trim();
+                showTask();
+            }
+        }
+
+        function clearSelectedTasks() {
+            const checkboxes = document.querySelectorAll('#tasklist input[type="checkbox"]:checked');
+            const indicesToDelete = Array.from(checkboxes).map(checkbox => parseInt(checkbox.getAttribute('data-index')));
+            tasks = tasks.filter((task, index) => !indicesToDelete.includes(index));
+            showTask();
+        }
+
+        function clearAllTasks() {
+            tasks = [];
+            showTask();
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

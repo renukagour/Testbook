@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Enumerable concept</h1>
+    <script>
+        // const detail1 = {
+        //     name: "koko",
+        //     age: 22,
+        //     roll: 22,
+        //     address: "kathmandu",
+        //     city: "kathmandu",
+        //     name:'john'
+        // }
+        // for (const key in detail1) {
+        //     if (detail1.hasOwnProperty(key))
+        //         console.log(key,": "+detail1[key]);
+        // }
+
+        const detail1={
+            name:"koko",
+            age:22,
+            address:'kathmandu',
+        }
+        const detail2={
+            name:"kkk",
+            age:20,
+            roll:22
+        }
+        const res=Object.assign(detail1,detail2);
+        console.log(res); //only unique key and if repeat latest value will be taken
+    </script>
+</body>
+
+</html>

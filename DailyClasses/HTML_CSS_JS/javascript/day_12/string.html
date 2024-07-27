@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>String in javascript</h1>
+    <script>
+        let a1 = "hello";
+        let a2 = "hello";
+        let b1 = new String("hello");
+        let b2 = new String("hello");
+        console.log(typeof (a1)); //string
+        console.log(typeof (b1)); //object
+
+        let b3 = b1;
+        if (a1 == a2) //true
+            console.log("a1 and a2 are true");
+        else
+            console.log("a1``and a2 are false");
+        if (a1 === a2) //true
+            console.log("a1 and a2 are true for ===");
+        else
+            console.log("a1``and a2 are false");
+        if (a1 == b1) //true
+            console.log("a1 and b1 are true");
+        else
+            console.log("a1 and a2 are false");
+        if (a1 === b1) //also check type so false 
+            console.log("a1 and b1 are true for ===");
+        else
+            console.log("a1 and b1 are false for ===");
+        if (b1 == b2) //false
+            console.log("b1 and b2 are true");
+        else
+            console.log("b1 and b2 are false");
+        if (b1 === b2) //false slp  different memory locations
+            console.log("b1 and b2 are true for ===");
+        else
+            console.log("b1 and b2 are false for ===");
+        if (b3 == b1) //true also for ===
+            console.log("b3 and b1 are true");
+        else
+            console.log("b3 and b1 are false");
+
+        const detail1={
+            name:"koko",
+            age:22
+        }
+        const detail2={
+            name:"kkk",
+            age:20
+        }
+        const res=Object.assign(detail1,detail2);
+        console.log(res);
+    </script>
+</body>
+
+</html>

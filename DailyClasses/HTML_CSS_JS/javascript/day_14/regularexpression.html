@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Regular Expressions in JS</h1>
+    <p id="demo"></p>
+    <script>
+        // let text="Hello students how are you?"
+        //let regexpression=new RegExp("pattern","flags");
+
+        //flags -- m/i/g --multiline,ignorecase,global
+
+        // let text="Hello students";
+        // let pattern=/students/;
+        // let result=text.match(pattern);
+        // document.getElementById('demo').innerHTML=result;
+
+        // *************flags/modifiers/attributes**************
+
+        //******i******
+        // let text="Hello students";
+        // let pattern=/Students/i; //ignore case
+        // let result=text.match(pattern);
+        // document.getElementById('demo').innerHTML=result;
+
+        //******g******
+        //  let text="Hello students. How are you Students?";
+        // let pattern=/Students/ig; //ignore case ,global level all possible values
+        // let result=text.match(pattern);
+        // document.getElementById('demo').innerHTML=result;
+
+        //******m******
+//         let text = `Is this
+//         all there
+// is 
+//  is
+//          `;
+        // let pattern=/^is/igm; //Is //only is start line , search in multiple line
+        // let pattern = /^is/mig; //Is,is //start with is
+        // let result = text.match(pattern);
+        // document.getElementById('demo').innerHTML = result;
+
+        // *****************groups********************
+        //-----------------[abc]--------------
+
+        // let text = `Is this all there ? is it is`;
+        // // let pattern = /[ih]/ig; //search for both h or i
+        // // let pattern = /[a-i]/ig;
+        // // let pattern = /[A-z]/g;
+        // let pattern = /[^h]/ig; //except h all are negation indicate under brackets
+        // let result = text.match(pattern);
+        // document.getElementById('demo').innerHTML = result;
+
+        //-----------------[0-9]--------------
+        //   let text='1236547896545'
+        // // let pattern = /[1-4]/ig; 
+        // let pattern = /[^1-4]/ig;
+        // let result = text.match(pattern);
+        // document.getElementById('demo').innerHTML = result;
+ 
+
+        // *****************MetaCharacters********************
+        let text="Give-100%@"
+        // let pattern=/\w/g; //match A-z 0-9 _
+        // let pattern=/\W/g; //except A-z 0-9 _
+        // let pattern=/\d/g; //match 0-9
+        let pattern=/\D/g; //except 0-9
+        let result=text.match(pattern);
+        document.getElementById('demo').innerHTML=result;
+
+
+
+    </script>
+</body>
+
+</html>

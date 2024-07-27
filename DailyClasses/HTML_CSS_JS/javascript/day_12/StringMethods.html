@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>String in javascript</h1>
+    <script>
+        let name = 'peter';
+        console.log(name[2]);
+        let fruits = 'apple,banana,strawbery, mango,orange';
+        let newfruits = fruits.slice(2, 6);
+        console.log(newfruits);
+
+        let newfruits1 = fruits.slice(2);
+        console.log(newfruits1); //ple,banana,strawbery, mango,orange
+
+        let newfruits2 = fruits.slice(-3);
+        console.log(newfruits2); //nge
+
+        let newfruits3 = fruits.slice(-15, -3);
+        console.log(newfruits3); //y, mango,ora
+
+        // string.substr(start, length)
+        let text = "Hello world!";
+        let result = text.substr(1, 4);
+        console.log(result);
+
+        // string.substring(start, end)
+        let result1 = text.substring(1, 4);
+        console.log(result1);
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    slice
+    substr
+    substring
+ -->

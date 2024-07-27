@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container" class="container mt-5">
+        <h1 class="text-center mb-4">Task Manager</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Enter Task">
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+            </div>
+        </div>
+        <ul id="tasklist" class="list-group">
+
+        </ul>
+    </div>
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            const taskInput = document.getElementById('taskInput').value;
+            const TaskText = taskInput.trim();
+            if (TaskText !== '') {
+                tasks.push(TaskText);
+                console.log(tasks);
+            } else {
+                alert('Enter Task');
+            }
+            showTask();
+        }
+
+        function showTask() {
+            const tasklist = document.getElementById('tasklist');
+            tasklist.innerHTML = '';
+            for (let i = 0; i < tasks.length; i++) {
+                const taskItem = document.createElement('li');
+                taskItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                taskItem.textContent = tasks[i];
+
+                const buttonDelete = document.createElement('button');
+                buttonDelete.className = 'btn btn-danger btn-sm';
+                buttonDelete.textContent = 'Delete';
+                buttonDelete.onclick = function() {
+                    deleteTask(i);
+                };
+
+                taskItem.appendChild(buttonDelete);
+                tasklist.appendChild(taskItem);
+            }
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            showTask();
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

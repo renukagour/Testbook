@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form action="" onsubmit="return emailPattern()">
+        <label for="email">Enter Email</label>
+        <input type="text" id="emailCheck">
+        <span id="err-msg"></span>
+        <button type="submit">Submit</button>   
+    </form>
+    <script>
+        function emailPattern(){
+            event.preventDefault();
+            console.log("email");
+            var emailCheck=document.getElementById('emailCheck').value;
+            var pattern=/[A-z0-9]{3,}@[A-z]{3,5}[.][A-z.]{3}/;
+            if(emailCheck.match(pattern)){
+                document.getElementById('err-msg').innerHTML="Valid Email";
+                return true;
+            }
+            else{
+                document.getElementById('err-msg').innerHTML="Invalid Email";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

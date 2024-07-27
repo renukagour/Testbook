@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Task Manager</h1>
+        <input type="text" id="taskInput" placeholder="Enter Task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <ul id="tasklist">
+
+    </ul>
+    <script>
+        let tasks=[];
+        function addTask() {
+            const taskInput = document.getElementById('taskInput').value;
+            // console.log(taskInput);
+            const TaskText=taskInput.trim();
+            if(TaskText!==''){
+                tasks.push(TaskText);
+                console.log(tasks);
+               
+            }
+            else{
+                alert('Enter Task');
+            }
+            showTask();
+        }
+        function showTask() {
+            const tasklist=document.getElementById('tasklist');
+            tasklist.innerHTML='';
+            for(let i=0;i<tasks.length;i++){
+                const taskItem=document.createElement('li');
+                taskItem.textContent=tasks[i];
+                const buttonDelete=document.createElement('button');
+                buttonDelete.textContent='Delete';
+                // buttonDelete.addEventListener('click',()=>{
+                //     tasks.splice(i,1); //at what index you want to delete and how many elements
+
+                // })
+                buttonDelete.onclick=function(){
+                    deleteTask(i);
+                }
+
+                tasklist.appendChild(taskItem);
+                taskItem.appendChild(buttonDelete);
+            }
+        }
+        function deleteTask(index) {
+            tasks.splice(index,1);
+            showTask();
+        }
+      
+    </script>
+</body>
+</html>
