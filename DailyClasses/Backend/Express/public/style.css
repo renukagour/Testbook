@@ -1,0 +1,11 @@
+.para {
+  background-color: rgb(122, 46, 209);
+  color: brown;
+}
+p {
+  background-color:aqua;
+  color: brown;
+}
+button{
+    border: 1px solid red;
+}
