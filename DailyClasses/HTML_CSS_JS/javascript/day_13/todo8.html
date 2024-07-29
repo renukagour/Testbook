@@ -5,53 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
     <div id="container" class="container mt-5">
         <h1 class="text-center mb-4">Task Manager</h1>
         <div class="input-group mb-3">
             <input type="text" id="taskInput" class="form-control" placeholder="Enter Task">
-            <div class="input-group-append ml-2">
-                <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+            <div class="input-group-append">
+                <button id="taskButton" class="btn btn-primary" onclick="handleTask()">Add Task</button>
             </div>
         </div>
         <div class="text-right mb-3">
+            <button class="btn btn-secondary mr-2" onclick="filterTasks('all')">All</button>
+            <button class="btn btn-secondary mr-2" onclick="filterTasks('pending')">Pending</button>
+            <button class="btn btn-secondary mr-2" onclick="filterTasks('completed')">Completed</button>
             <button class="btn btn-danger" onclick="clearSelectedTasks()">Clear Selected</button>
             <button class="btn btn-warning ml-2" onclick="clearAllTasks()">Clear All</button>
         </div>
-        <ul id="tasklist" class="list-group">
-
-        </ul>
+        <ul id="tasklist" class="list-group"></ul>
     </div>
     <script>
-        let tasks = [];
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        let filter = 'all';
+        let editIndex = -1; // To keep track of which task is being edited
 
-        function addTask() {
+        function handleTask() {
             const taskInput = document.getElementById('taskInput').value;
             const TaskText = taskInput.trim();
+
             if (TaskText !== '') {
-                tasks.push(TaskText);
+                if (editIndex === -1) {
+                    // Add new task
+                    tasks.push({ text: TaskText, completed: false });
+                } else {
+                    // Update existing task
+                    tasks[editIndex].text = TaskText;
+                    editIndex = -1; // Reset edit index after updating
+                    document.getElementById('taskButton').textContent = 'Add Task'; // Reset button text
+                }
                 document.getElementById('taskInput').value = ''; // Clear input field
+                saveTasks();
+                showTask();
             } else {
                 alert('Enter Task');
             }
-            showTask();
         }
 
         function showTask() {
             const tasklist = document.getElementById('tasklist');
             tasklist.innerHTML = '';
-            for (let i = 0; i < tasks.length; i++) {
+            let filteredTasks = tasks;
+            if (filter === 'pending') {
+                filteredTasks = tasks.filter(task => !task.completed);
+            } else if (filter === 'completed') {
+                filteredTasks = tasks.filter(task => task.completed);
+            }
+            for (let i = 0; i < filteredTasks.length; i++) {
                 const taskItem = document.createElement('li');
-                taskItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                taskItem.className = `list-group-item d-flex justify-content-between align-items-center ${filteredTasks[i].completed ? 'completed' : ''}`;
                 
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
                 checkbox.className = 'mr-2';
+                checkbox.checked = filteredTasks[i].completed;
                 checkbox.setAttribute('data-index', i);
+                checkbox.onclick = function() {
+                    toggleTaskCompletion(i);
+                };
 
                 taskItem.appendChild(checkbox);
-                taskItem.appendChild(document.createTextNode(tasks[i]));
+                taskItem.appendChild(document.createTextNode(filteredTasks[i].text));
 
                 const buttonContainer = document.createElement('div');
 
@@ -59,7 +87,7 @@
                 buttonUpdate.className = 'btn btn-warning btn-sm mr-2';
                 buttonUpdate.textContent = 'Update';
                 buttonUpdate.onclick = function() {
-                    updateTask(i);
+                    prepareUpdateTask(i);
                 };
 
                 const buttonDelete = document.createElement('button');
@@ -79,28 +107,46 @@
 
         function deleteTask(index) {
             tasks.splice(index, 1);
+            saveTasks();
             showTask();
         }
 
-        function updateTask(index) {
-            const newTask = prompt('Update Task', tasks[index]);
-            if (newTask !== null && newTask.trim() !== '') {
-                tasks[index] = newTask.trim();
-                showTask();
-            }
+        function prepareUpdateTask(index) {
+            document.getElementById('taskInput').value = tasks[index].text; // Populate input field with task text
+            document.getElementById('taskButton').textContent = 'Update Task'; // Change button text
+            editIndex = index; // Set the index of the task being edited
+        }
+
+        function toggleTaskCompletion(index) {
+            tasks[index].completed = !tasks[index].completed;
+            saveTasks();
+            showTask();
+        }
+
+        function filterTasks(taskFilter) {
+            filter = taskFilter;
+            showTask();
         }
 
         function clearSelectedTasks() {
             const checkboxes = document.querySelectorAll('#tasklist input[type="checkbox"]:checked');
             const indicesToDelete = Array.from(checkboxes).map(checkbox => parseInt(checkbox.getAttribute('data-index')));
             tasks = tasks.filter((task, index) => !indicesToDelete.includes(index));
+            saveTasks();
             showTask();
         }
 
         function clearAllTasks() {
             tasks = [];
+            saveTasks();
             showTask();
         }
+
+        function saveTasks() {
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        document.addEventListener('DOMContentLoaded', showTask);
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
