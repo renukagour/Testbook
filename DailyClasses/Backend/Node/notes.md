@@ -1,4 +1,4 @@
-# notes
+# Notes
 
 Every code their run time environment/engine to run
 
