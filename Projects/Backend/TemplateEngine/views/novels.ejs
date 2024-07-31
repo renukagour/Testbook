@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novels Details</title>
+</head>
+<body>
+  
+<%- include('partials/navbar.ejs') %>
+    <h1>Novels to Read</h1>
+    <ol>
+        <%novels.forEach(novel=>{ %>
+            <li> <%=novel.nName%></li>
+            <%});%>         
+    </ol>
+  
+
+</body>
+</html>

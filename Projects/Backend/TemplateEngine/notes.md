@@ -17,7 +17,20 @@
   - Embedded JavaScript Templates
   - used js as backend using Syntax <%= EJS %>
 
-- HBs
+- HBS
   - Handledbars
 - PUG
   - Not used mostly it is difficult to use
+
+---
+
+## Rules of Template Engine
+
+- ake one public folder for all static files
+- views folders for views
+- index.js --entry point
+
+## additional
+
+- partials
+  - used when you want include same code in all line like a component in react

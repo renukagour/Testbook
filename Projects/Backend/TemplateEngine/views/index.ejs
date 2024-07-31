@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs')%>
+    <h1>Product List</h1>
+    <ul>
+        <% products.forEach(product => { %>
+            <li><%= product.name %> - <%= product.price %></li>
+        <% }); %>         
+    </ul>
+ 
+</body>
+</html>
+<!-- always use = if there is variable 
+jab deekha rahi hu tab use kiya h -->
