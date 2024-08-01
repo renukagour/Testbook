@@ -14,9 +14,9 @@ if error express shows can not get this, give automatically 404 error also.
 
 ## express middleware
 
-http gives h2 tag is it as a string in http -- content- Type -- text/plain -- by default either if you want treat you have write text/html
+http gives ```<h2>``` tag is it as a string in http -- content- Type -- text/plain -- by default either if you want treat you have write text/html
 
-but in express it gives proper working of h2 tag
+but in express it gives proper working of ```<h2>``` tag
 
 -- by default is text/html
 
