@@ -16,7 +16,6 @@
 - EJS
   - Embedded JavaScript Templates
   - used js as backend using Syntax <%= EJS %>
-
 - HBS
   - Handledbars
 - PUG
@@ -28,7 +27,7 @@
 
 - ake one public folder for all static files
 - views folders for views
-- index.js --entry point
+- index.js -- entry point
 
 ## additional
 

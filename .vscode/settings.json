@@ -1,10 +1,13 @@
 {
     "liveServer.settings.port": 5501,
     "cSpell.words": [
+        "confirmpassword",
         "documentgetelementbyid",
         "fileupload",
+        "firstname",
         "hardwork",
         "highestmark",
+        "lastname",
         "mynumber",
         "mypromise",
         "nodebasicdata",
