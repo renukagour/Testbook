@@ -1,0 +1,58 @@
+models
+ - uesemodel - name, email, phone, address, isAdmin==false
+ - hotel_model - name, address, no of rooms, rates, img_url
+ - bookin_model - date, amount , no of room, refId of hotels, refid of user
+
+db
+ - conn.js
+
+routes
+ - user routes
+ 		 - localhost:5000/api/user/register
+		 Ex. 
+			router.get("register",(req,res)=>{
+			//logic for registration
+			//error handling empty user, duplicate user
+			})
+           	 - localhost:5000/api/user/login (JWT Authentication)
+		   // add user to cookies
+		 - localhost:5000/api/user/admin --> if you want dont include this use isAdmin facility of usermodel
+		- localhost:5000/api/user/ (GET) // get all user
+
+
+ - booking routes - add booking
+ 		  - getAllbooking
+	     	  -getbookingByID
+ - hotels routes -- addhotels 
+ 		--getAllhotels
+		-- updatehotel
+		/api/hotel (POST)
+
+main file - server.js
+ 		-- middlware
+		--app.use("/api/user", user_routes)
+		--app.use("/app/hotel",hotel_rotes) // if hotel then manage by hotel routes
+
+For testing use Postman
+API's available
+
+
+localhost:500/api/user (register)
+ 	login
+	getAllusers
+	getUserByID
+
+same for hotels
+
+localhost:500/api/hotel (register)
+ 	add
+	update
+	
+use cors
+use React
+axios -call APis
+components
+header footer nav
+Pages - register, login, home, showbooking, Allhotels page, individualhotel page, adminDAshboard page
+
+this is fronted+backend+postman(testing)+api(restful apis)

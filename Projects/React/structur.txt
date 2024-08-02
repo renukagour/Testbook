@@ -2,9 +2,15 @@ component directory
   -- navbar
   --- sidebar
   --addQuestion
-  --addOuestionDialog
+  --addOuestionDialog -popup
   -- posts.js
 
 
-home.js
-notification.js
+  -- home.js
+  -- notification.js
+ 
+Routing -- react-roter-dom
+
+  /home
+  /notification
+
