@@ -1,0 +1,79 @@
+# Revision of Javascript
+
+- js
+- why js is fast
+  - Asynchronous,synchronous, non-blocking programming, single thread(can handle multiple request and connection with single thread)
+- display methods
+  - alert confirm prompt, document.write, documentgetelementbyid
+- defer keyword
+  - when browser loading html and css code defer keyword allows to load first html and css then js loaded
+  - it is boolean value
+  - it is true by default
+  - syntax: ``` <script src = “app.js” defer></script> ```
+  - in above case your using external js file
+- types of variable in js
+  - global
+  - local
+- data types
+  - String Number Bigint Boolean Undefined Null Symbol Object
+- undefined vs null vs undeclared
+- var let const
+  - declaration of variable
+  - block scope - let const
+  - function scope - var
+  - redeclaration of var let allowed
+  - const not allowed
+- what is type Coercion
+  - term refers to automatic conversion of one data type to another
+- Operators
+  - spread
+  - rest
+- loops
+  - for of
+  - for in
+- Use strict keyword
+- remove event listener
+- classes, constructor , Objects etc
+- function
+- function declaration vs function expression
+- arrow function
+- function closure
+  - allows to access variable of outer function from inner function
+  - accessing outer variable in inner function
+  - with the help of lexical environment closure in js
+- function hoisting
+  - allow to use before declaration
+  - normal function allows us call it before and after declaration in both case
+  - but in case of arrow function it is not possible
+  - because function is stored in variable
+- function binding
+  - create function with different arguments
+- lexical scope
+  - outer env of inner function
+  - surrounding state of an function
+- DOM
+  - DOM manipulation
+  - DOM traversal
+  - DOM manipulation
+  - DOM event
+  - create dynamically HTML elements
+  - rendering document in browser
+- Math
+- Fetch
+  - used to fetch API
+
+## new concepts
+
+- URLSearchParams
+- sessionStorage
+  - temporary
+- modal effects
+- local storage
+  - permanent
+- windows.location.href
+- Deep Copy
+- Shallow Copy
+- toLocalString in Date
+- toLocalTimeString in Date
+- endCodeURLComponent
+- classList - DOM

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #containr{
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+    }
+    #timebox{
+        color: white;
+        border: 10px solid black;
+        width:180px;
+        background-color: rgba(0,0,0,0.5);
+        height: 180px;
+        display: inline-block;
+        margin: 50px;
+        padding: 30px;
+        border-image: linear-gradient(red,blue) 30;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Time zone</h1>
+    <div id="container">
+        <div id="timebox">
+            <h1>India</h1>
+            <p id="india"></p>
+        </div>
+        <div id="timebox">
+            <h1>New York</h1>
+            <p id="newyork"></p>
+        </div>
+    </div>
+
+    <script>
+        var indianTime=function(){
+            document.getElementById('india').innerHTML=new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata',timeStyle:'medium'});
+        }
+        // indianTime();
+        setInterval(indianTime,1000) //to display in each sec
+        var newyork=function(){
+            document.getElementById('newyork').innerHTML=new Date().toLocaleString('en-US',{timeZone:'America/New_York',timeStyle:'short',hourCycle:'h12'});
+        }
+        // indianTime();
+        setInterval(newyork,1000)
+    </script>
+</body>
+
+</html>

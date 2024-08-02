@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let text = "";
+        for(let x of fruits){
+            text += x + "<br>";
+            console.log(x);
+        }
+        for(let x in fruits){
+            console.log(fruits[x]); // index value
+        }
+        document.getElementById("demo").innerHTML = text
+
+        //string 
+        const message = "Hello";
+        for(let x of message){
+            console.log(x);
+        }
+
+        //for in
+        const person = {fname:"John", lname:"Doe", age:25};
+        let text1 = "";
+        for(let x in person){
+            text1 += person[x] + "<br>";
+            console.log(x,person[x]); //key, value
+        }
+        document.getElementById("demo1").innerHTML = text1
+
+        //object cannot iterate through for of loop
+        // it is done using for in
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spread Operator</h1>
+    <script>
+// spread operator in array
+// let a=[1,2,3];
+// let b=[4,5,6];
+// let c=[...a,...b];
+// console.log(c);
+
+// const originalArray=[1,2,3,4,5];
+// arr=originalArray;
+// const newArray=[...originalArray];
+// console.log('originalArray '+originalArray);
+// console.log("newArray "+newArray);
+// console.log("arr "+arr);
+// console.log(originalArray===arr);//true //same reference
+// console.log(originalArray===newArray);//false //different reference
+
+// arr[0]="apple";
+// console.log("originalArray "+originalArray); //changes in original array
+
+// newArray[1]="mango";
+// console.log("newArray "+newArray); //changes in new array
+// console.log("originalArray "+originalArray);
+
+// shallow copy -> changes in arr array reflected in old array -- arr=originalArray;
+//deep copy -> changes in new array not reflected in old array -- newArray=[...originalArray];
+
+// combing array using spread operator
+// let a=[1,2,3];
+// let b=[4,5,6];
+// let c=[...a,...b];
+// console.log(c);
+
+// adding new element in array using spread operator
+let a=[1,2,3];
+let b=[4,5,6];
+let c=[...a,4,5,6];
+console.log(c);
+
+
+    </script>
+</body>
+</html>

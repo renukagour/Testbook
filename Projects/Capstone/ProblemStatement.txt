@@ -1,0 +1,17 @@
+ProblemStatement
+Create an Ecommerce website with the following requirements : 
+●Create a signup page & login page (Users can’t see products with out login)
+●The E-commerce Home page header should have elements such as 
+○E-commerce Logo
+○Search box
+○Homeicon
+○Cart icon
+○Order History Button
+●The E-commerce website should have a product list (Use React to fetch products & display)
+●The E-commerce website should have search box (For searching products)
+●Every product should have‘ Add to cart ’button
+●For every product in the cart there should be following features:-
+○Edit Quantity
+○Delete Product 
+Product Quantity should be Re-calculated after the above operations.
+●The order history button on the home page should show a user's order history

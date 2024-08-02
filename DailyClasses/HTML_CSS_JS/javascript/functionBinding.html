@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person ={
+            name :"peter",
+            greet: function(){
+                console.log(`hello  ${this.name}`);
+                return 9;
+            }
+        }
+
+        // person.greet()
+
+        const boundGreet = person.greet.bind(person)
+        boundGreet();
+
+        function show(age, city){
+             console.log(`${this.name} ${age} ${city} ${this.greet()}`); //this.name, age, city);
+        }
+
+        const boundShow=show.bind(person, 22, 'kathmandu');
+        boundShow();
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Profile Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LinkedIn Profile Search</h1>
+        <input type="text" id="userid" placeholder="Enter User ID">
+        <button onclick="searchProfile()">Search</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function fetchlinkedinProfile(userid) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const profiles = {
+                        1: { name: 'John', title: 'Software Engineer' },
+                        2: { name: 'Jane', title: 'Data Scientist' },
+                    };
+                    const profile = profiles[userid];
+                    if (profile) {
+                        resolve(profile);
+                    } else {
+                        reject('Profile not found');
+                    }
+                }, 1000);
+            });
+        }
+
+        async function searchProfile() {
+            const userid = document.getElementById('userid').value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Fetching profile...';
+            try {
+                const profile = await fetchlinkedinProfile(userid);
+                resultDiv.innerHTML = `Name: ${profile.name}, Title: ${profile.title}`;
+            } catch (e) {
+                resultDiv.innerHTML = e;
+            }
+        }
+    </script>
+</body>
+</html>

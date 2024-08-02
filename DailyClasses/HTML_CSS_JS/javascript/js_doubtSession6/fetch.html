@@ -1,0 +1,61 @@
+<!-- When your fetching directly through Database it is heavy and difficult to load
+so we are using fetch API
+that decrease your load time 
+this data available in xml and json format-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Patient info</h1>
+    <!-- <div id="demo"></div> -->
+    <div id="patientdata"></div>
+    <script>
+//  left hand side always in double inverted where as right side be in or not
+//API - Is a technology interface used to fetch data from database through url to fronted
+// fetch - api interface method
+//  {
+//            "name" :"peter"
+//         }
+
+//middle between connecting fronted and backend
+// https://api.npoint.io/828b9d39bf9fa3a2cef6
+
+fetch('https://api.npoint.io/828b9d39bf9fa3a2cef6')
+.then((res)=>res.json())  //it will tell that data is in json format
+.then((data)=>{
+    console.log(data)
+    // document.getElementById('demo').innerHTML = data //[object Object]
+    // const patientdataElement= document.getElementById('patientdata');
+    // patientdataElement.innerHTML = JSON.stringify(data) //it give data
+
+    const patientsData = data.patients;
+    console.log(patientsData)
+    const patientdataElement= document.getElementById('patientdata');
+    patientsData.forEach(p => {
+        console.log(p);
+        const patientDiv=document.createElement('div');
+        patientDiv.innerHTML=`
+        <h1>${p.name}</h1>
+        <p>ID: ${p.id}</p>
+        <p>DOB: ${p.dob}</p>
+        <p>Gender :${p.gender}</p>
+        <p>Address: ${p.contact.address}</p>
+        <p>Email: ${p.contact.email}</p>
+        <p>Phone: ${p.contact.phone}</p>
+        `
+        patientdataElement.appendChild(patientDiv)
+    });
+})
+ //getting data and display data
+.catch((e)=>console.log(e))
+
+
+//jsonplaceholder
+//https://jsonplaceholder.typicode.com/users
+    </script>
+</body>
+</html>

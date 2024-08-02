@@ -1,0 +1,21 @@
+# ideas
+
+- displaying time of various zones, countries
+- to do list
+- memory check game
+- quiz app
+- dice game
+- tic tac toe game
+- snake game
+- hangman game
+- by entering name of character display all the info like ne, image, power, weakness, etc.
+- add post to facebook
+- searching in linkedin profile
+- Monsoon Checker
+  - by entering month name display monsoon  and image of that monsoon
+- alarm clock
+- my notes
+  - changing color of each note after adding it
+- StopWatch
+  - start stop lap restart
+- canvas

@@ -1,0 +1,10 @@
+component directory
+  -- navbar
+  --- sidebar
+  --addQuestion
+  --addOuestionDialog
+  -- posts.js
+
+
+home.js
+notification.js

@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Season Checker</title>
+</head>
+<body>
+  <script>
+    // Get user input for the month
+    const userInput = prompt("Enter a month (e.g., January, February, etc.):");
+    const month = userInput.toLowerCase(); // Convert input to lowercase for case-insensitive comparison
+
+    let season;
+
+    // Determine season based on the provided month using nested if-else statements
+    if (month === 'december' || month === 'january' || month === 'february' || month === 'march' || month === 'april') {
+      season = 'Winter';
+    } else if (month === 'may' || month === 'june') {
+      season = 'Summer or pre-monsoon';
+    } else if (month === 'july' || month === 'august' || month === 'september' || month === 'october') {
+      season = 'Monsoon';
+    } else if (month === 'november') {
+      season = 'Post-monsoon';
+    } else {
+      season = 'Invalid month';
+    }
+
+    // Display the determined season to the user
+    if (season !== 'Invalid month') {
+      alert(`The season for ${month} is ${season}.`);
+    } else {
+      alert('Please enter a valid month.');
+    }
+  </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Season Checker</title>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: black;
+      color: white;
+    }
+
+    img {
+      width: 600px;
+      height: 500px;
+      margin-top: 20px;
+      display: none; /* Initially hiding the image */
+    }
+    #divimg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Season Checker</h1>
+  <label for="monthInput">Enter a month (e.g., January, February, etc.):</label>
+  <input type="text" id="monthInput">
+  <button onclick="checkSeason()">Check Season</button>
+  <p id="result"></p>
+  <div id="divimg">  <img id="seasonImage" src="" alt="Season Image">
+  </div>
+
+  <script>
+    function checkSeason() {
+      const userInput = document.getElementById('monthInput').value.toLowerCase();
+      let season;
+      let imageSrc;
+
+      if (userInput === 'december' || userInput === 'january' || userInput === 'february' || userInput === 'march' || userInput === 'april') {
+        season = 'Winter';
+        imageSrc = 'https://th.bing.com/th/id/OIP.gdoMRcLlDSIKvD7VdhSNpwHaE6?rs=1&pid=ImgDetMain'; // Placeholder image for Winter
+      } else if (userInput === 'may' || userInput === 'june') {
+        season = 'Summer or pre-monsoon';
+        imageSrc = 'https://wallpapers.com/images/hd/summer-season-pictures-8de4y718ktuxsqvb.jpg'; // Placeholder image for Summer
+      } else if (userInput === 'july' || userInput === 'august' || userInput === 'september' || userInput === 'october') {
+        season = 'Monsoon';
+        imageSrc = 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Monsoon_clouds_near_Nagercoil.jpg'; // Placeholder image for Monsoon
+      } else if (userInput === 'november') {
+        season = 'Post-monsoon';
+        imageSrc = 'https://cdn.britannica.com/88/137188-050-8C779D64/Boston-Public-Garden.jpg'; // Placeholder image for Post-monsoon
+      } else {
+        season = 'Invalid month';
+        imageSrc = ''; // No image for an invalid month
+      }
+
+      const resultText = document.getElementById('result');
+      const seasonImage = document.getElementById('seasonImage');
+
+      if (season !== 'Invalid month') {
+        resultText.textContent = `The season for ${userInput} is ${season}.`;
+        seasonImage.src = imageSrc;
+        seasonImage.style.display = 'block'; // Display the image for the corresponding season
+      } else {
+        resultText.textContent = 'Please enter a valid month.';
+        seasonImage.style.display = 'none'; // Hide the image for an invalid month
+      }
+    }
+  </script>
+</body>
+</html>
+

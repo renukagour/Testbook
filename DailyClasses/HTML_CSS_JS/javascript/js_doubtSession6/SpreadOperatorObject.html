@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Spread Operator</h1>
+    <script>
+        // case 1 - copy object
+        let a = { name: "peter", uid: 48, marks: 100 };
+        let b = { ...a };
+        console.log(a);
+        console.log(b);
+        console.log(a === b); // false
+        const newa=a;
+        console.log(newa);
+        console.log(newa===a);//true
+        newa.name="john";
+        console.log(a);//changes in original object
+        b.name = "jenny";
+        console.log(a);//changes in new object doesn't affect main
+
+
+        // function arguments
+        // function add(a, b, c) {
+        //     return (a + b + c);
+        // }
+        // let arr = [1, 2, 3];
+        // const result1=add(...arr);
+        // const result2=add(1,2,3);
+        // console.log("result1 "+result1+" result2 "+result2);
+
+
+        // 
+
+</script>
+
+</body>
+
+</html>

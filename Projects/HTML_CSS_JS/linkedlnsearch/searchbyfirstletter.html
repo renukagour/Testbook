@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Profile Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LinkedIn Profile Search</h1>
+        <div>
+            <input type="radio" id="searchById" name="searchType" value="id" checked>
+            <label for="searchById">Search by ID</label>
+            <input type="radio" id="searchByName" name="searchType" value="name">
+            <label for="searchByName">Search by Name</label>
+        </div>
+        <input type="text" id="searchInput" placeholder="Enter User ID or Name" oninput="searchProfile()">
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const profiles = {
+            1: { name: 'John', title: 'Software Engineer' },
+            2: { name: 'Jane', title: 'Data Scientist' },
+            3: { name: 'Jack', title: 'Product Manager' },
+            4: { name: 'Jill', title: 'UX Designer' },
+        };
+
+        function fetchlinkedinProfileById(userid) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const profile = profiles[userid];
+                    if (profile) {
+                        resolve(profile);
+                    } else {
+                        reject('Profile not found');
+                    }
+                }, 500);
+            });
+        }
+
+        function fetchlinkedinProfileByName(name) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const matchingProfiles = Object.values(profiles).filter(profile =>
+                        profile.name.toLowerCase().startsWith(name.toLowerCase())
+                    );
+                    if (matchingProfiles.length > 0) {
+                        resolve(matchingProfiles);
+                    } else {
+                        reject('No matching profiles found');
+                    }
+                }, 500);
+            });
+        }
+
+        async function searchProfile() {
+            const searchInput = document.getElementById('searchInput').value;
+            const resultDiv = document.getElementById('result');
+            const searchType = document.querySelector('input[name="searchType"]:checked').value;
+            
+            if (!searchInput) {
+                resultDiv.innerHTML = '';
+                return;
+            }
+
+            resultDiv.innerHTML = 'Fetching profile...';
+            try {
+                let profiles;
+                if (searchType === 'id') {
+                    const profile = await fetchlinkedinProfileById(searchInput);
+                    profiles = [profile]; // wrap single profile in an array for uniform handling
+                } else {
+                    profiles = await fetchlinkedinProfileByName(searchInput);
+                }
+                resultDiv.innerHTML = profiles.map(profile => `Name: ${profile.name}, Title: ${profile.title}`).join('<br>');
+            } catch (e) {
+                resultDiv.innerHTML = e;
+            }
+        }
+    </script>
+</body>
+</html>
