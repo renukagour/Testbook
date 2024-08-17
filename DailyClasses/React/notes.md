@@ -11,9 +11,17 @@ Angular - 167 KB
 CRA - create-react-app -- all packages get downloaded hence heavier than vite
 Since 2023 React new tool come in picture i.e. Vite
 
+- size 300MB
+- 65000 files
+- 7000 folders
+
 ## Vite
 
 Since 2023 React new tool come in picture i.e. Vite
+
+- size 65MB
+- 65000 files
+- 801 folders
 
 ## Steps
 

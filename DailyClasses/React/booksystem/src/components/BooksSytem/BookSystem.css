@@ -1,0 +1,141 @@
+/* BookSystem.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff6347;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+}
+
+form h2 {
+  color: #ff6347;
+}
+
+form input,
+form select,
+form button {
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #ff6347;
+}
+
+form button {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+.BookList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Book {
+  background: #fff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 40px);
+  max-width: 300px;
+  text-align: left;
+}
+
+.Book h3 {
+  color: #ff6347;
+}
+
+.Book p {
+  margin: 5px 0;
+}
+
+.Book button {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: calc(100% - 20px);
+}
+
+.Book button:hover {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+.Book button:first-of-type {
+  margin-top: 10px;
+}
+
+.Book button:last-of-type {
+  margin-bottom: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+input[type="text"],
+select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #ff6347;
+}
+
+input[type="text"]::placeholder {
+  color: #ccc;
+}
