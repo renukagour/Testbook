@@ -28,7 +28,7 @@ const novels = [
 // but in case of template engine we don't need to import or require this file
 // there is specific method called render
 // render is used to send data to an external file
-// render in root directory i.e. tempalteengine folder search for views folde 
+// render in root directory i.e. tempalteengine folder search for views folder
 // and inside views folder search for index.ejs
 
 app.get('/',(req,res)=>{
