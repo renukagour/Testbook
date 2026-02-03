@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Text Formatting Demo</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .text-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        .demo-text {
+            /* 1. Text Color */
+            color: #2c3e50;
+
+            /* 2. Text Alignment */
+            text-align: justify;
+
+            /* 3. Text Decoration (Underline, Overline, or Line-through) */
+            text-decoration: underline wavy #3498db;
+
+            /* 4. Text Transformation (uppercase, lowercase, capitalize) */
+            text-transform: capitalize;
+
+            /* 5. Text Indentation */
+            text-indent: 50px;
+
+            /* 6. Letter Spacing (Tracking) */
+            letter-spacing: 3px;
+
+            /* 7. Line Height (Leading) */
+            line-height: 1.9;
+
+            /* 8. Text Direction (ltr or rtl) */
+            direction: rtl;
+
+            /* 9. Text Shadow (x-offset y-offset blur color) */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+            /* 10. Word Spacing */
+            word-spacing: 20px;
+
+            font-size: 18px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #e74c3c;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .rotated-word {
+            display: inline-block;
+            /* Essential for rotation to work */
+            transform: rotate(90deg);
+            /* Rotates 15 degrees counter-clockwise */
+            color: #e74c3c;
+            /* Optional: adds color to make it pop */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="text-box">
+        <h2>Formatting Demo</h2>
+        <p class="demo-text">
+            this paragraph demonstrates various css text properties. we have applied color,
+            alignment, and shadows. you can see how the first line is indented and how
+            the words and letters have extra spacing between them. the line height
+            ensures there is plenty of room between the rows of text, making it
+            easier to read while the decoration adds a stylish wavy underline.
+        </p>
+
+        <p>
+            This paragraph has a <span class="rotated-word">rotated</span> word in the middle.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
