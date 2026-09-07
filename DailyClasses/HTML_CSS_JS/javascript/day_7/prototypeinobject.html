@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employee={
+            calctax(){
+                console.log("tax rate is 10%");
+            }
+        }
+
+        const suraj={
+            salary:50000,
+            calctax:function(){
+                console.log("tax rate is 20%");
+            }
+        }
+        console.log(employee);
+        console.log(suraj);
+        suraj.__proto__=employee;
+        suraj.calctax(); // tax rate is 10%
+
+    </script>
+</body>
+</html>
