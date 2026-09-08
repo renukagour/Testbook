@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Parent{
+            hello(){
+                console.log("From Parent hello");
+            }
+        }
+
+        class child extends Parent{
+
+        }
+
+        const c= new child();
+        c.hello();
+
+        class Person{
+            constructor(name){
+                console.log("In parent constructor");
+                this.species="home sapiens";
+                this.name=name;
+            }
+            eat(){
+                console.log("Eating");
+            }
+            work(){
+                console.log("Person working");
+            }
+        }
+
+        class Engineer extends Person{
+            constructor(branch,name){ 
+                console.log("In child constructor");
+                super(name); //1st call to call parent constructor
+                this.branch=branch;
+                console.log("exist child constructor");
+            }
+            work(){
+                super.eat();
+                console.log("Working-Solving Problem, building something");
+            }
+        }
+
+        const renu=new Engineer('IT',"Renu");
+        console.log(renu);
+
+        // renu.eat();
+        renu.work(); //child method called not parent
+
+        class Doctor extends Person{
+            work(){
+                console.log("Treat Patient");
+            }
+        }
+    </script>
+</body>
+</html>
